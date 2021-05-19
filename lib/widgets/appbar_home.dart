@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lacuna/constants.dart';
 
 class AppBarHome extends StatelessWidget {
   const AppBarHome({
@@ -8,7 +9,7 @@ class AppBarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xff233851),
+      backgroundColor: kNavyBlue,
       leading: Padding(
         padding: const EdgeInsets.only(top: 18.0),
         child: TextButton(
@@ -56,7 +57,7 @@ class AppBarHome extends StatelessWidget {
                     contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                     fillColor: Colors.white,
                     hintStyle: TextStyle(
-                      color: Color(0xffbcc3ca),
+                      color: kGrey,
                     ),
                     filled: true,
                     border: OutlineInputBorder(
