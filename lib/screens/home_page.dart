@@ -6,12 +6,9 @@ import 'package:lacuna/widgets/category_horizontal_section_builder.dart';
 import 'package:lacuna/widgets/product_horizontal_section_builder.dart';
 import 'package:lacuna/widgets/product_vertical_section_builder.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-              CategoryHorizontalSectionBuilder(categories: categories)
+                CategoryHorizontalSectionBuilder(categories: categories)
               ],
             ),
             ProductHorizontalSectionBuilder(

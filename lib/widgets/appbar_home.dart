@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
 
 class AppBarHome extends StatelessWidget {
-  const AppBarHome({
-    Key? key,
-  }) : super(key: key);
+  const AppBarHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +27,21 @@ class AppBarHome extends StatelessWidget {
       ),
       actions: [
         Padding(
-          padding: EdgeInsets.only(top: 18.0,),
+          padding: EdgeInsets.only(
+            top: 18.0,
+          ),
           child: TextButton(
-            onPressed: (){},
+            onPressed: () {},
             child: Badge(
-                badgeColor: kSecondaryTextColor,
-                badgeContent: Text(
-                    '3',
-                  style: TextStyle(color: kDarkTextColor),
-                ),
-                child: Icon(Icons.shopping_bag, color: kDarkTextColor,)
+              badgeColor: kSecondaryTextColor,
+              badgeContent: Text(
+                '3',
+                style: TextStyle(color: kDarkTextColor),
+              ),
+              child: Icon(
+                Icons.shopping_bag,
+                color: kDarkTextColor,
+              ),
             ),
           ),
         )
@@ -50,32 +53,30 @@ class AppBarHome extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding:
-                  EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
+                padding: EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                    fillColor: kDarkTextColor,
-                    hintStyle: TextStyle(
-                      color: kGrey,
-                    ),
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
-                        width: 0.8,
+                      contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                      fillColor: kDarkTextColor,
+                      hintStyle: TextStyle(
+                        color: kGrey,
                       ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
-                        width: 0.8,
-                        color: kPrimaryColor,
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          width: 0.8,
+                        ),
                       ),
-                    ),
-                    hintText: 'Search here...',
-                    prefixIcon: Icon(Icons.search)
-                  ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          width: 0.8,
+                          color: kPrimaryColor,
+                        ),
+                      ),
+                      hintText: 'Search here...',
+                      prefixIcon: Icon(Icons.search)),
                 ),
               ),
             ),
