@@ -6,26 +6,36 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 dependencies:
+  cupertino_icons: ^1.0.3
+  badges: ^2.0.1
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.3
+
+
+
+
+dev_dependencies:
   flutter_launcher_icons: ^0.9.0
-  flutter_rating_bar: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_name:
+  name: "Lacuna"
+
 flutter_icons:
   android: "launcher_icon"
   ios: true
+  remove_alpha_ios: true
   image_path: "assets/icon/icon.png"
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
+#  fonts:
+#    - family: Roboto
+#      fonts:
+#        - asset: assets/fonts/Roboto-Regular.ttf
+#        - asset: assets/fonts/Roboto-Bold.ttf
+#          weight: 700
 

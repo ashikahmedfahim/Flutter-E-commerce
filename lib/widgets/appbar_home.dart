@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
 
@@ -9,21 +10,17 @@ class AppBarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: kNavyBlue,
+      backgroundColor: kPrimaryColor,
       leading: Padding(
-        padding: const EdgeInsets.only(top: 18.0),
-        child: TextButton(
+        padding: EdgeInsets.only(top: 18.0),
+        child: IconButton(
           onPressed: () {},
-          child: Image(
-            width: 21.43,
-            height: 16.33,
-            image: AssetImage('assets/images/menu.png'),
-          ),
+          icon: Icon(Icons.menu_outlined),
         ),
       ),
       centerTitle: true,
       title: Padding(
-        padding: const EdgeInsets.only(top: 35.0),
+        padding: EdgeInsets.only(top: 35.0),
         child: Image(
           height: 37.0,
           width: 74.0,
@@ -32,30 +29,33 @@ class AppBarHome extends StatelessWidget {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(top: 18.0),
+          padding: EdgeInsets.only(top: 18.0,),
           child: TextButton(
-            onPressed: () {},
-            child: Image(
-              height: 25.34,
-              width: 25.34,
-              image: AssetImage('assets/images/notification.png'),
+            onPressed: (){},
+            child: Badge(
+                badgeColor: kSecondaryTextColor,
+                badgeContent: Text(
+                    '3',
+                  style: TextStyle(color: kDarkTextColor),
+                ),
+                child: Icon(Icons.shopping_bag, color: kDarkTextColor,)
             ),
           ),
         )
       ],
       flexibleSpace: Padding(
-        padding: const EdgeInsets.only(top: 100.0),
+        padding: EdgeInsets.only(top: 100.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Expanded(
               child: Padding(
                 padding:
-                    const EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
+                  EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
                 child: TextField(
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                    fillColor: Colors.white,
+                    fillColor: kDarkTextColor,
                     hintStyle: TextStyle(
                       color: kGrey,
                     ),
@@ -70,33 +70,29 @@ class AppBarHome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
                         width: 0.8,
-                        color: Theme.of(context).primaryColor,
+                        color: kPrimaryColor,
                       ),
                     ),
                     hintText: 'Search here...',
-                    prefixIcon: Image(
-                      color: Color(0xffbcc3ca),
-                      image: AssetImage('assets/images/search_icon.png'),
-                    ),
+                    prefixIcon: Icon(Icons.search)
                   ),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 16.0, bottom: 15.0),
+              padding: EdgeInsets.only(right: 16.0, bottom: 15.0),
               child: Container(
                 height: 44.0,
                 width: 44.0,
                 decoration: BoxDecoration(
-                  color: Color(0xfffee05b),
+                  color: kSecondaryButtonColor,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: TextButton(
+                child: IconButton(
                   onPressed: () {},
-                  child: Image(
-                    height: 25.34,
-                    width: 25.34,
-                    image: AssetImage('assets/images/custom_search.png'),
+                  icon: Icon(
+                    Icons.tune_outlined,
+                    color: kDarkTextColor,
                   ),
                 ),
               ),

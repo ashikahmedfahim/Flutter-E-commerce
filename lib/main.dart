@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:lacuna/screens/home_page.dart';
+import 'package:lacuna/routes/route.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -15,8 +16,12 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter',
-      home: HomePage(),
+      title: 'Lacuna',
+      initialRoute: '/',
+      routes: lacunaRoutes,
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
     );
   }
 }

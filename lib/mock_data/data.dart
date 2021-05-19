@@ -1,10 +1,11 @@
 class Category {
   Category({required this.title, required this.imgUrl});
+
   String title;
   String imgUrl;
 }
 
-final List<Category> allCategories = [
+final List<Category> categories = [
   Category(title: 'Electronics', imgUrl: 'assets/images/catElectronics.png'),
   Category(title: 'Fashion', imgUrl: 'assets/images/catFashion.png'),
   Category(title: 'Health', imgUrl: 'assets/images/catHealth.png'),
@@ -13,8 +14,8 @@ final List<Category> allCategories = [
   Category(title: 'Groceries', imgUrl: 'assets/images/catGroceries.png'),
 ];
 
-class CardItem {
-  CardItem(
+class Product {
+  Product(
       {required this.tag,
       required this.isFavourite,
       required this.imgUrl,
@@ -22,6 +23,7 @@ class CardItem {
       required this.price,
       required this.reviewStars,
       required this.reviewCount});
+
   String tag;
   bool isFavourite;
   String imgUrl;
@@ -31,8 +33,8 @@ class CardItem {
   int reviewCount;
 }
 
-final List<CardItem> latest = [
-  CardItem(
+final List<Product> products = [
+  Product(
     tag: 'New',
     isFavourite: true,
     imgUrl: 'assets/images/latestOne.png',
@@ -41,7 +43,25 @@ final List<CardItem> latest = [
     reviewStars: 5.0,
     reviewCount: 45,
   ),
-  CardItem(
+  Product(
+    tag: 'New',
+    isFavourite: true,
+    imgUrl: 'assets/images/latestTwo.png',
+    title: 'Awesome T-shirt',
+    price: 139.99,
+    reviewStars: 5.0,
+    reviewCount: 45,
+  ),
+  Product(
+    tag: 'New',
+    isFavourite: true,
+    imgUrl: 'assets/images/latestTwo.png',
+    title: 'Awesome T-shirt',
+    price: 139.99,
+    reviewStars: 5.0,
+    reviewCount: 45,
+  ),
+  Product(
     tag: 'New',
     isFavourite: true,
     imgUrl: 'assets/images/latestTwo.png',
