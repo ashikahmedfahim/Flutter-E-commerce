@@ -49,7 +49,7 @@ class ProductCard extends StatelessWidget {
               image: AssetImage(product.imgUrl),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 16.0, bottom: 12.0),
+              padding: EdgeInsets.only(top: 12.0, bottom: 10.0),
               child: Text(
                 product.title,
                 style: TextStyle(
@@ -67,7 +67,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              padding: EdgeInsets.only(left: 10.0, right: 10.0,top: 8.0),
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
