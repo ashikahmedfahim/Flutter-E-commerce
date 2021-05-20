@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lacuna/components/product_card.dart';
+import 'package:lacuna/custom_design/SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight.dart';
 import 'package:lacuna/mock_data/data.dart';
 
 class ProductYAxisSectionBuilder extends StatelessWidget {
@@ -10,22 +11,18 @@ class ProductYAxisSectionBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GridView.count(
-          shrinkWrap: true,
+    return Container(
+      child: GridView.builder(
+        shrinkWrap: true,
+        itemCount: products.length,
+        physics: NeverScrollableScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
           crossAxisCount: 2,
-          childAspectRatio: MediaQuery.of(context).size.width /
-              (MediaQuery.of(context).size.height / 1.1),
-          physics: BouncingScrollPhysics(),
-          children: List.generate(
-            products.length,
-            (index) => ProductCard(
-              product: products[index],
-            ),
-          ),
+          height: 320,
         ),
-      ],
+        itemBuilder: (BuildContext context, int index) =>
+            ProductCard(product: products[index]),
+      ),
     );
   }
 }
