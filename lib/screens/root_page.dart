@@ -20,12 +20,10 @@ class _RootPageState extends State<RootPage> {
         () => {
           MySharedPreferences.instance.getStringValue("auth_token").then(
                 (value) => {
-                  if (value.isEmpty || value.length == 0)
-                    {
-                      Navigator.pushReplacementNamed(context, "home/")
-                    } //replace with login when api ready
-                  else
-                    {Navigator.pushReplacementNamed(context, "home/")}
+                  (value.isEmpty || value.length == 0)
+                      ? Navigator.pushReplacementNamed(context, "home/")
+                      //replace with login when api ready
+                      : Navigator.pushReplacementNamed(context, "home/")
                 },
               )
         },
