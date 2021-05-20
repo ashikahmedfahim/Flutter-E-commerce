@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lacuna/constants.dart';
+import 'package:lacuna/components/label_with_see_all.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/widgets/appbar_home.dart';
 import 'package:lacuna/widgets/category_x_axis_section_builder.dart';
@@ -41,44 +41,47 @@ class HomePage extends StatelessWidget {
                 CategoryXAxisSectionBuilder(categories: categories)
               ],
             ),
-            ProductXAxisSectionBuilder(
-              label: "Latest",
-              products: products,
+            Container(
+              padding: EdgeInsets.only(top: 16.0),
+              height: 400.0,
+              child: Column(
+                children: [
+                  LabelWithSeeAll(label: "Latest"),
+                  ProductXAxisSectionBuilder(
+                    products: products,
+                  ),
+                ],
+              ),
             ),
-            ProductXAxisSectionBuilder(
-              label: "Best Seller",
-              products: products,
+            Container(
+              padding: EdgeInsets.only(top: 16.0),
+              height: 400.0,
+              child: Column(
+                children: [
+                  LabelWithSeeAll(label: "Best Seller"),
+                  ProductXAxisSectionBuilder(
+                    products: products,
+                  ),
+                ],
+              ),
             ),
-            ProductXAxisSectionBuilder(
-              label: "Specials",
-              products: products,
+            Container(
+              padding: EdgeInsets.only(top: 16.0),
+              height: 400.0,
+              child: Column(
+                children: [
+                  LabelWithSeeAll(label: "Specials"),
+                  ProductXAxisSectionBuilder(
+                    products: products,
+                  ),
+                ],
+              ),
             ),
             Container(
               padding: EdgeInsets.only(top: 16.0),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "All Products",
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'See All',
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            color: kSecondaryTextColor,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  LabelWithSeeAll(label: "All Products"),
                   ProductYAxisSectionBuilder(
                     products: products,
                   ),
