@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 20.0),
+                  padding: EdgeInsets.only(top: 16.0, bottom: 20.0),
                   child: Text(
                     'All Categories',
                     style: TextStyle(
