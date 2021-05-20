@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/components/product_card.dart';
 import 'package:lacuna/mock_data/data.dart';
 
-class ProductVerticalSectionBuilder extends StatelessWidget {
+class ProductYAxisSectionBuilder extends StatelessWidget {
   final List<Product> products;
 
-  const ProductVerticalSectionBuilder({Key? key, required this.products})
+  const ProductYAxisSectionBuilder({Key? key, required this.products})
       : super(key: key);
 
   @override

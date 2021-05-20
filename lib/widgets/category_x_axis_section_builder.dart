@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/components/category_card.dart';
 import 'package:lacuna/mock_data/data.dart';
 
-class CategoryHorizontalSectionBuilder extends StatelessWidget {
+class CategoryXAxisSectionBuilder extends StatelessWidget {
   final List<Category> categories;
-  const CategoryHorizontalSectionBuilder({Key? key, required this.categories}) : super(key: key);
+  const CategoryXAxisSectionBuilder({Key? key, required this.categories}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

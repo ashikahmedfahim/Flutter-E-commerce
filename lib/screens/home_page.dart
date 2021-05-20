@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/widgets/appbar_home.dart';
-import 'package:lacuna/widgets/category_horizontal_section_builder.dart';
-import 'package:lacuna/widgets/product_horizontal_section_builder.dart';
-import 'package:lacuna/widgets/product_vertical_section_builder.dart';
+import 'package:lacuna/widgets/category_x_axis_section_builder.dart';
+import 'package:lacuna/widgets/product_x_axis_section_builder.dart';
+import 'package:lacuna/widgets/product_y_axis_section_builder.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -38,18 +38,18 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CategoryHorizontalSectionBuilder(categories: categories)
+                CategoryXAxisSectionBuilder(categories: categories)
               ],
             ),
-            ProductHorizontalSectionBuilder(
+            ProductXAxisSectionBuilder(
               label: "Latest",
               products: products,
             ),
-            ProductHorizontalSectionBuilder(
+            ProductXAxisSectionBuilder(
               label: "Best Seller",
               products: products,
             ),
-            ProductHorizontalSectionBuilder(
+            ProductXAxisSectionBuilder(
               label: "Specials",
               products: products,
             ),
@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  ProductVerticalSectionBuilder(
+                  ProductYAxisSectionBuilder(
                     products: products,
                   ),
                 ],

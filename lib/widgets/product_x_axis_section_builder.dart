@@ -3,11 +3,11 @@ import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/components/product_card.dart';
 
-class ProductHorizontalSectionBuilder extends StatelessWidget {
+class ProductXAxisSectionBuilder extends StatelessWidget {
   final String label;
   final List<Product> products;
 
-  const ProductHorizontalSectionBuilder(
+  const ProductXAxisSectionBuilder(
       {Key? key, required this.label, required this.products})
       : super(key: key);
 
