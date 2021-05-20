@@ -72,7 +72,7 @@ class ProductCard extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: kPrimaryColor,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12), // <-- Radius
+                    borderRadius: BorderRadius.circular(7), // <-- Radius
                   ),
                 ),
                 onPressed: () {},
