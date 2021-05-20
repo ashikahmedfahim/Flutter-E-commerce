@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                     'All Categories',
                     style: TextStyle(
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
