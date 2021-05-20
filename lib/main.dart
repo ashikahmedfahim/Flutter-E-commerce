@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );
   }
