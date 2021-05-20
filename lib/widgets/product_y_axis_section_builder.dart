@@ -15,7 +15,7 @@ class ProductYAxisSectionBuilder extends StatelessWidget {
         GridView.count(
           shrinkWrap: true,
           crossAxisCount: 2,
-          childAspectRatio: 0.57,
+          childAspectRatio: 0.6,
           physics: BouncingScrollPhysics(),
           children: List.generate(
             products.length,
