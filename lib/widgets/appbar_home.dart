@@ -13,7 +13,10 @@ class AppBarHome extends StatelessWidget {
         padding: EdgeInsets.only(top: 18.0),
         child: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.menu_outlined),
+          icon: Icon(
+            Icons.menu_outlined,
+            size: 30,
+          ),
         ),
       ),
       centerTitle: true,
@@ -41,6 +44,7 @@ class AppBarHome extends StatelessWidget {
               child: Icon(
                 Icons.shopping_bag,
                 color: kDarkTextColor,
+                size: 30,
               ),
             ),
           ),

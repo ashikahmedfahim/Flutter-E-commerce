@@ -66,19 +66,22 @@ class ProductCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              width: 146.0,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: kPrimaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(7), // <-- Radius
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: kPrimaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7), // <-- Radius
+                    ),
                   ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Add To Cart',
-                  style: TextStyle(fontSize: 12.0, color: kDarkTextColor),
+                  onPressed: () {},
+                  child: Text(
+                    'Add To Cart',
+                    style: TextStyle(fontSize: 12.0, color: kDarkTextColor),
+                  ),
                 ),
               ),
             ),
