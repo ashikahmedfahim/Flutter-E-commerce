@@ -16,19 +16,6 @@ class _RootPageState extends State<RootPage> {
     redirectPage();
   }
 
-  final Widget backgroundImage = SvgPicture.asset(
-      'assets/images/rootBackgroundImage.svg',
-      semanticsLabel: 'Root Background Image',
-      height: double.infinity,
-      width: double.infinity,
-      fit: BoxFit.fill,
-  );
-
-  final Widget logo = SvgPicture.asset(
-      'assets/images/Logo.svg',
-      semanticsLabel: 'Lacuna'
-  );
-
   Future<void> redirectPage() async => new Future.delayed(
         const Duration(seconds: 2),
         () => {
@@ -51,14 +38,23 @@ class _RootPageState extends State<RootPage> {
           children: [
             Center(
               child: Container(
-                child: backgroundImage,
+                child: SvgPicture.asset(
+                  'assets/images/rootBackgroundImage.svg',
+                  semanticsLabel: 'Root Background Image',
+                  height: double.infinity,
+                  width: double.infinity,
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
             Center(
               child: Container(
                 height: 76.0,
                 width: 152.0,
-                child: logo,
+                child: SvgPicture.asset(
+                  'assets/images/Logo.svg',
+                  semanticsLabel: 'Lacuna',
+                ),
               ),
             ),
           ],
