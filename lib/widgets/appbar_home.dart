@@ -1,9 +1,14 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppBarHome extends StatelessWidget {
-  const AppBarHome({Key? key}) : super(key: key);
+
+  final Widget logo = SvgPicture.asset(
+      'assets/images/Logo.svg',
+      semanticsLabel: 'Lacuna'
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +26,11 @@ class AppBarHome extends StatelessWidget {
       ),
       centerTitle: true,
       title: Padding(
-        padding: EdgeInsets.only(top: 35.0),
-        child: Image(
-          height: 37.0,
-          width: 74.0,
-          image: AssetImage('assets/images/Logo.png'),
+        padding: EdgeInsets.only(top: 45.0),
+        child: Container(
+          height: 27.0,
+            width: 54.0,
+            child: logo,
         ),
       ),
       actions: [
