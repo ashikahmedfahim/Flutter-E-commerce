@@ -22,7 +22,7 @@ class _RootPageState extends State<RootPage> {
           MySharedPreferences.instance.getStringValue("auth_token").then(
                 (value) => {
                   (value.isEmpty || value.length == 0)
-                      ? Navigator.pushReplacementNamed(context, "home/")
+                      ? Navigator.pushReplacementNamed(context, "welcome/")
                       //replace with login when api ready
                       : Navigator.pushReplacementNamed(context, "home/")
                 },

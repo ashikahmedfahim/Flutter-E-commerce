@@ -10,6 +10,7 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
         child: Stack(
@@ -26,7 +27,8 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             Positioned(
-              top: (MediaQuery.of(context).size.height / 6),
+              top: (screenSize.height / 6),
+              left: screenSize.width / 3.3,
               child: Container(
                 height: 76.0,
                 width: 152.0,
@@ -37,11 +39,11 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             Positioned(
-              top: (MediaQuery.of(context).size.height / 3),
-              width: MediaQuery.of(context).size.width,
+              top: (screenSize.height / 3),
+              width: screenSize.width,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 33.0),
-                height: (MediaQuery.of(context).size.height / 3) * 2,
+                height: (screenSize.height / 3) * 2,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -91,14 +93,15 @@ class _WelcomePageState extends State<WelcomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 6.0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
+                        width: double.infinity,
                         height: 50.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.0),
                           border: Border.all(color: kPrimaryColor),
                         ),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Navigator.pushNamed(context, 'home/'),
                           child: Text(
                             'Sign In',
                             style: TextStyle(
@@ -114,7 +117,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 6.0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
+                        width: double.infinity,
                         height: 50.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.0),
