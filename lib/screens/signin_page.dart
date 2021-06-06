@@ -2,31 +2,25 @@ import 'package:flutter/material.dart';
 import '../components/welcome_background.dart';
 import '../constants.dart';
 
-class WelcomePage extends StatefulWidget {
+class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
+
   @override
-  _WelcomePageState createState() => _WelcomePageState();
+  _SignInState createState() => _SignInState();
 }
 
-class _WelcomePageState extends State<WelcomePage> {
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return WelcomeBackground(welcomeView: welcomeView(context));
+    return WelcomeBackground(welcomeView: signInView(context));
   }
 }
 
-Column welcomeView(BuildContext context) {
+Column signInView(BuildContext context) {
   return Column(
     children: [
       Text(
-        'WELCOME TO',
-        style: TextStyle(
-          color: Color(0xff222222),
-          fontSize: 28.0,
-          fontWeight: FontWeight.w900,
-        ),
-      ),
-      Text(
-        'LACUNA APPAREL',
+        'Sign In Your Account',
         style: TextStyle(
           color: Color(0xff222222),
           fontSize: 28.0,
@@ -38,14 +32,14 @@ Column welcomeView(BuildContext context) {
         child: Column(
           children: [
             Text(
-              'Lacuna is the best platform for your online',
+              'Enter your Email address and password to',
               style: TextStyle(
                 color: Color(0xff5b5b5b),
                 fontSize: 16.0,
               ),
             ),
             Text(
-              'based shopping. New Experience!',
+              'to access your account',
               style: TextStyle(
                 color: Color(0xff5b5b5b),
                 fontSize: 16.0,
@@ -64,7 +58,7 @@ Column welcomeView(BuildContext context) {
             border: Border.all(color: kPrimaryColor),
           ),
           child: TextButton(
-            onPressed: () => Navigator.pushNamed(context, 'signin/'),
+            onPressed: () => Navigator.pushNamed(context, 'home/'),
             child: Text(
               'Sign In',
               style: TextStyle(
@@ -74,31 +68,6 @@ Column welcomeView(BuildContext context) {
               ),
             ),
             style: ButtonStyle(),
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
-        child: Container(
-          width: double.infinity,
-          height: 50.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5.0),
-            border: Border.all(color: kPrimaryColor),
-          ),
-          child: TextButton(
-            onPressed: () {},
-            child: Text(
-              'Sign Up',
-              style: TextStyle(
-                fontSize: 17.0,
-                fontWeight: FontWeight.w600,
-                color: kDarkTextColor,
-              ),
-            ),
-            style: TextButton.styleFrom(
-              backgroundColor: kPrimaryColor,
-            ),
           ),
         ),
       ),
