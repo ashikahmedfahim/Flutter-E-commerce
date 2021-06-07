@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/welcome_background.dart';
 import '../constants.dart';
@@ -10,17 +11,26 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  bool isRememberChecked = false;
+  toggleCheck(bool value) {
+    setState(() {
+      isRememberChecked = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return WelcomeBackground(welcomeView: signInView(context));
+    return WelcomeBackground(
+        welcomeView: signInView(context, isRememberChecked, toggleCheck));
   }
 }
 
-Column signInView(BuildContext context) {
+Column signInView(
+    BuildContext context, bool isRememberChecked, Function toggleCheck) {
   return Column(
     children: [
       Text(
-        'Sign In Your Account',
+        'Sign In To Your Account',
         style: TextStyle(
           color: Color(0xff222222),
           fontSize: 28.0,
@@ -115,16 +125,22 @@ Column signInView(BuildContext context) {
           children: [
             Row(
               children: [
-                Icon(
-                  Icons.check_circle,
-                  color: kPrimaryColor,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Text(
-                    'Remember me',
-                    style: TextStyle(color: kGreyText, fontSize: 16.0),
+                SizedBox(
+                  height: 45.0,
+                  width: 45.0,
+                  child: TextButton(
+                    onPressed: () {
+                      toggleCheck(!isRememberChecked);
+                    },
+                    child: Icon(
+                      Icons.check_circle,
+                      color: isRememberChecked ? kPrimaryColor : kGreyText,
+                    ),
                   ),
+                ),
+                Text(
+                  'Remember me',
+                  style: TextStyle(color: kGreyText, fontSize: 16.0),
                 ),
               ],
             ),
@@ -181,6 +197,72 @@ Column signInView(BuildContext context) {
           ],
         ),
       ),
+      Padding(
+        padding: EdgeInsets.only(top: 40.0),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Row(
+                children: [
+                  HorizontalLine(),
+                  Text(
+                    'Or Sign In with',
+                    style: TextStyle(color: kGreyText, fontSize: 16.0),
+                  ),
+                  HorizontalLine(),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
+                  child: Image(
+                    height: 40.0,
+                    width: 40.0,
+                    image: AssetImage('assets/images/google.png'),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
+                  child: Image(
+                    height: 40.0,
+                    width: 40.0,
+                    image: AssetImage('assets/images/facebook.png'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     ],
   );
+}
+
+class HorizontalLine extends StatelessWidget {
+  const HorizontalLine({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Column(
+          children: [
+            Divider(
+              color: kGreyText,
+              thickness: 2.0,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
