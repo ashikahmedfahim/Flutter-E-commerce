@@ -52,9 +52,10 @@ class AppBarHome extends StatelessWidget {
         )
       ],
       flexibleSpace: Padding(
-        padding: EdgeInsets.only(top: 100.0),
+        padding: EdgeInsets.only(top: 120.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               child: Padding(
