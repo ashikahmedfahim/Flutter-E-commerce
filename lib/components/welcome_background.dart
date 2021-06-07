@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -38,7 +39,7 @@ class WelcomeBackground extends StatelessWidget {
               top: (screenSize.height / 3),
               width: screenSize.width,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 33.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 13.0),
                 height: (screenSize.height / 3) * 2,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -47,7 +48,10 @@ class WelcomeBackground extends StatelessWidget {
                     topRight: Radius.circular(30.0),
                   ),
                 ),
-                child: welcomeView,
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  child: welcomeView,
+                ),
               ),
             ),
           ],

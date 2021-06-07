@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 const kGrey = Color(0xffbcc3ca);
 const kGreyBackground = Color(0xf6c6c6c);
+const kGreyText = Color(0xff5b5b5b);
 const kPrimaryColor = Color(0xff233851);
 const kSecondaryButtonColor = Color(0xffe5c220);
 const kSecondaryTextColor = Color(0xffeac007);

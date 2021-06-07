@@ -52,7 +52,7 @@ class AppBarHome extends StatelessWidget {
         )
       ],
       flexibleSpace: Padding(
-        padding: EdgeInsets.only(top: 120.0),
+        padding: EdgeInsets.only(top: 110.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -62,7 +62,7 @@ class AppBarHome extends StatelessWidget {
                 padding: EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
                 child: TextField(
                   decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                      contentPadding: EdgeInsets.symmetric(vertical: 5.0),
                       fillColor: kDarkTextColor,
                       hintStyle: TextStyle(
                         color: kGrey,

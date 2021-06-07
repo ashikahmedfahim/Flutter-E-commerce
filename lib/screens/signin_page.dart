@@ -28,7 +28,7 @@ Column signInView(BuildContext context) {
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 20.0, bottom: 64.0),
+        padding: EdgeInsets.only(top: 20.0, bottom: 32.0),
         child: Column(
           children: [
             Text(
@@ -50,10 +50,98 @@ Column signInView(BuildContext context) {
       ),
       Padding(
         padding: EdgeInsets.symmetric(vertical: 6.0),
+        child: TextField(
+          decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              fillColor: kDarkTextColor,
+              hintStyle: TextStyle(
+                color: kGreyText,
+              ),
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  width: 0.8,
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  width: 0.8,
+                  color: kPrimaryColor,
+                ),
+              ),
+              hintText: 'Enter Your Email',
+              prefixIcon: Icon(
+                Icons.email,
+                color: kPrimaryColor,
+              )),
+        ),
+      ),
+      Padding(
+        padding: EdgeInsets.symmetric(vertical: 6.0),
+        child: TextField(
+          decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              fillColor: kDarkTextColor,
+              hintStyle: TextStyle(
+                color: kGreyText,
+              ),
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  width: 0.8,
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  width: 0.8,
+                  color: kPrimaryColor,
+                ),
+              ),
+              hintText: 'Enter Your Password',
+              prefixIcon: Icon(
+                Icons.lock,
+                color: kPrimaryColor,
+              )),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 14.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.check_circle,
+                  color: kPrimaryColor,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Text(
+                    'Remember me',
+                    style: TextStyle(color: kGreyText, fontSize: 16.0),
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              'Forgot Password?',
+              style: TextStyle(color: kGreyText, fontSize: 16.0),
+            ),
+          ],
+        ),
+      ),
+      Padding(
+        padding: EdgeInsets.symmetric(vertical: 6.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
           decoration: BoxDecoration(
+            color: kPrimaryColor,
             borderRadius: BorderRadius.circular(5.0),
             border: Border.all(color: kPrimaryColor),
           ),
@@ -64,11 +152,33 @@ Column signInView(BuildContext context) {
               style: TextStyle(
                 fontSize: 17.0,
                 fontWeight: FontWeight.w600,
-                color: kPrimaryColor,
+                color: kDarkTextColor,
               ),
             ),
             style: ButtonStyle(),
           ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Don\'t have an account?',
+              style: TextStyle(color: kGreyText, fontSize: 16.0),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                    color: kPrimaryColor,
+                    fontSize: 17.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       ),
     ],
