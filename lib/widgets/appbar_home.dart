@@ -7,6 +7,7 @@ class AppBarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
       leading: Padding(
         padding: EdgeInsets.only(top: 18.0),
@@ -52,7 +53,7 @@ class AppBarHome extends StatelessWidget {
         )
       ],
       flexibleSpace: Padding(
-        padding: EdgeInsets.only(top: 110.0),
+        padding: EdgeInsets.only(top: 115.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -13,6 +13,9 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Lacuna',

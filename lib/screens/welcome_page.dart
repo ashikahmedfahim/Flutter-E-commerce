@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../components/welcome_background.dart';
-import '../components/social_login.dart';
 import '../constants.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -21,7 +20,7 @@ Column welcomeView(BuildContext context) {
       Text(
         'WELCOME TO',
         style: TextStyle(
-          color: Color(0xff222222),
+          color: kSoftBlackColor,
           fontSize: 28.0,
           fontWeight: FontWeight.w900,
         ),
@@ -29,7 +28,7 @@ Column welcomeView(BuildContext context) {
       Text(
         'LACUNA APPAREL',
         style: TextStyle(
-          color: Color(0xff222222),
+          color: kSoftBlackColor,
           fontSize: 28.0,
           fontWeight: FontWeight.w900,
         ),
@@ -41,14 +40,14 @@ Column welcomeView(BuildContext context) {
             Text(
               'Lacuna is the best platform for your online',
               style: TextStyle(
-                color: Color(0xff5b5b5b),
+                color: kDarkAshColor,
                 fontSize: 16.0,
               ),
             ),
             Text(
               'based shopping. New Experience!',
               style: TextStyle(
-                color: Color(0xff5b5b5b),
+                color: kDarkAshColor,
                 fontSize: 16.0,
               ),
             ),

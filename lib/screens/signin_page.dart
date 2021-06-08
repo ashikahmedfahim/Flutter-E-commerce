@@ -144,7 +144,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14.0),
+        padding: EdgeInsets.symmetric(vertical: 14.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -201,7 +201,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: const EdgeInsets.only(top: 10.0),
+        padding: EdgeInsets.only(top: 10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -210,7 +210,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
               style: TextStyle(color: kGreyText, fontSize: 16.0),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: TextButton(
                 onPressed: () => Navigator.pushNamed(context, 'signup/'),
                 child: Text(
@@ -226,7 +226,9 @@ Column signInView(BuildContext context, bool isRememberChecked,
           ],
         ),
       ),
-      SocialLogin(),
+      SocialLogin(
+        socialLoginText: 'Or Sign In with',
+      ),
     ],
   );
 }

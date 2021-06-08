@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
 
 class SocialLogin extends StatelessWidget {
+  final String socialLoginText;
   const SocialLogin({
     Key? key,
+    required this.socialLoginText,
   }) : super(key: key);
 
   @override
@@ -13,12 +15,12 @@ class SocialLogin extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
             child: Row(
               children: [
                 HorizontalLine(),
                 Text(
-                  'Or Sign In with',
+                  socialLoginText,
                   style: TextStyle(color: kGreyText, fontSize: 16.0),
                 ),
                 HorizontalLine(),
@@ -29,8 +31,7 @@ class SocialLogin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
+                padding: EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
                 child: Image(
                   height: 40.0,
                   width: 40.0,
@@ -38,8 +39,7 @@ class SocialLogin extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
+                padding: EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
                 child: Image(
                   height: 40.0,
                   width: 40.0,

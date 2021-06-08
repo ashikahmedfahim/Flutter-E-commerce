@@ -274,7 +274,9 @@ Column signUpView(
           ),
         ),
       ),
-      SocialLogin(),
+      SocialLogin(
+        socialLoginText: 'Or Sign Up with',
+      ),
     ],
   );
 }
