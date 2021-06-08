@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/welcome_background.dart';
+import '../components/social_login.dart';
 import '../constants.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -87,7 +88,7 @@ Column welcomeView(BuildContext context) {
             border: Border.all(color: kPrimaryColor),
           ),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, 'signup/'),
             child: Text(
               'Sign Up',
               style: TextStyle(
@@ -102,6 +103,7 @@ Column welcomeView(BuildContext context) {
           ),
         ),
       ),
+      SocialLogin(),
     ],
   );
 }

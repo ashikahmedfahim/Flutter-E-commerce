@@ -13,6 +13,13 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   bool isRememberChecked = false;
+  bool isVisible = false;
+  toggleVisibility(bool value) {
+    setState(() {
+      isVisible = value;
+    });
+  }
+
   toggleCheck(bool value) {
     setState(() {
       isRememberChecked = value;
@@ -22,12 +29,18 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return WelcomeBackground(
-        welcomeView: signInView(context, isRememberChecked, toggleCheck));
+        welcomeView: signInView(
+      context,
+      isRememberChecked,
+      toggleCheck,
+      isVisible,
+      toggleVisibility,
+    ));
   }
 }
 
-Column signInView(
-    BuildContext context, bool isRememberChecked, Function toggleCheck) {
+Column signInView(BuildContext context, bool isRememberChecked,
+    Function toggleCheck, bool isVisible, Function toggleVisibility) {
   return Column(
     children: [
       Text(
@@ -92,31 +105,42 @@ Column signInView(
       Padding(
         padding: EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
+          enableSuggestions: false,
+          autocorrect: false,
+          obscureText: isVisible ? false : true,
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
-              fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
-                color: kGreyText,
+            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+            fillColor: kDarkTextColor,
+            hintStyle: TextStyle(
+              color: kGreyText,
+            ),
+            filled: true,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              borderSide: BorderSide(
+                width: 0.8,
               ),
-              filled: true,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
-                  width: 0.8,
-                ),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
-                  width: 0.8,
-                  color: kPrimaryColor,
-                ),
-              ),
-              hintText: 'Enter Your Password',
-              prefixIcon: Icon(
-                Icons.lock,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              borderSide: BorderSide(
+                width: 0.8,
                 color: kPrimaryColor,
-              )),
+              ),
+            ),
+            hintText: 'Enter Your Password',
+            prefixIcon: Icon(
+              Icons.lock,
+              color: kPrimaryColor,
+            ),
+            suffixIcon: IconButton(
+              onPressed: () {
+                toggleVisibility(!isVisible);
+              },
+              icon: Icon(isVisible ? Icons.visibility : Icons.visibility_off),
+              color: kPrimaryColor,
+            ),
+          ),
         ),
       ),
       Padding(
@@ -187,12 +211,16 @@ Column signInView(
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                'Sign Up',
-                style: TextStyle(
+              child: TextButton(
+                onPressed: () => Navigator.pushNamed(context, 'signup/'),
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
                     color: kPrimaryColor,
                     fontSize: 17.0,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
