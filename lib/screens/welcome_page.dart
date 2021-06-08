@@ -103,7 +103,6 @@ Column welcomeView(BuildContext context) {
           ),
         ),
       ),
-      SocialLogin(),
     ],
   );
 }

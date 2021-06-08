@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lacuna/components/social_login.dart';
 import '../components/welcome_background.dart';
 import 'package:lacuna/constants.dart';
 
@@ -250,7 +251,7 @@ Column signUpView(
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 30.0),
+        padding: EdgeInsets.only(top: 30.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
@@ -273,6 +274,7 @@ Column signUpView(
           ),
         ),
       ),
+      SocialLogin(),
     ],
   );
 }
