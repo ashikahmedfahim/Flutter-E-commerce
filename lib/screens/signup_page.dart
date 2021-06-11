@@ -3,14 +3,14 @@ import 'package:lacuna/components/social_login.dart';
 import '../components/welcome_background.dart';
 import 'package:lacuna/constants.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  _SignUpState createState() => _SignUpState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _SignUpPageState extends State<SignUpPage> {
   bool isVisible = false;
   toggleVisibility(bool value) {
     setState(() {

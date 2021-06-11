@@ -10,7 +10,7 @@ Map<String, WidgetBuilder> lacunaRoutes = <String, WidgetBuilder>{
   '/': (context) => RootPage(),
   'welcome/': (context) => WelcomePage(),
   'home/': (context) => HomePage(),
-  'signin/': (context) => SignIn(),
-  'signup/': (context) => SignUp(),
-  'signupAdditional/': (context) => SignUpAdditionalInformation(),
+  'signin/': (context) => SignInPage(),
+  'signup/': (context) => SignUpPage(),
+  'signupAdditional/': (context) => SignUpAdditionalInformationPage(),
 };

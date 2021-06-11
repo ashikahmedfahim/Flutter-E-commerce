@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.dark,
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,

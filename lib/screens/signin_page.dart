@@ -4,14 +4,14 @@ import '../components/welcome_background.dart';
 import '../components/social_login.dart';
 import '../constants.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
-  _SignInState createState() => _SignInState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignInPageState extends State<SignInPage> {
   bool isRememberChecked = false;
   bool isVisible = false;
   toggleVisibility(bool value) {

@@ -3,7 +3,10 @@ import 'package:lacuna/constants.dart';
 
 class LabelWithSeeAll extends StatelessWidget {
   final String label;
-  const LabelWithSeeAll({Key? key, required this.label}) : super(key: key);
+  final String seeAllPressedRoute;
+  const LabelWithSeeAll(
+      {Key? key, required this.label, required this.seeAllPressedRoute})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class LabelWithSeeAll extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, seeAllPressedRoute),
           child: Text(
             'See All',
             style: TextStyle(

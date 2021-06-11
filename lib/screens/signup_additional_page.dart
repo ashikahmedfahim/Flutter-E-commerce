@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/components/welcome_background.dart';
 import 'package:lacuna/constants.dart';
 
-class SignUpAdditionalInformation extends StatefulWidget {
-  const SignUpAdditionalInformation({Key? key}) : super(key: key);
+class SignUpAdditionalInformationPage extends StatefulWidget {
+  const SignUpAdditionalInformationPage({Key? key}) : super(key: key);
 
   @override
-  _SignUpAdditionalInformationState createState() =>
-      _SignUpAdditionalInformationState();
+  _SignUpAdditionalInformationPageState createState() =>
+      _SignUpAdditionalInformationPageState();
 }
 
-class _SignUpAdditionalInformationState
-    extends State<SignUpAdditionalInformation> {
+class _SignUpAdditionalInformationPageState
+    extends State<SignUpAdditionalInformationPage> {
   @override
   Widget build(BuildContext context) {
     return WelcomeBackground(welcomeView: signUpAdditionalView(context));

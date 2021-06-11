@@ -46,7 +46,10 @@ class HomePage extends StatelessWidget {
               height: 400.0,
               child: Column(
                 children: [
-                  LabelWithSeeAll(label: "Latest"),
+                  LabelWithSeeAll(
+                    label: "Latest",
+                    seeAllPressedRoute: 'welcome/',
+                  ),
                   ProductXAxisSectionBuilder(
                     products: products,
                   ),
@@ -58,7 +61,10 @@ class HomePage extends StatelessWidget {
               height: 400.0,
               child: Column(
                 children: [
-                  LabelWithSeeAll(label: "Best Seller"),
+                  LabelWithSeeAll(
+                    label: "Best Seller",
+                    seeAllPressedRoute: 'welcome/',
+                  ),
                   ProductXAxisSectionBuilder(
                     products: products,
                   ),
@@ -70,7 +76,10 @@ class HomePage extends StatelessWidget {
               height: 400.0,
               child: Column(
                 children: [
-                  LabelWithSeeAll(label: "Specials"),
+                  LabelWithSeeAll(
+                    label: "Specials",
+                    seeAllPressedRoute: 'welcome/',
+                  ),
                   ProductXAxisSectionBuilder(
                     products: products,
                   ),
@@ -81,7 +90,10 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.only(top: 16.0),
               child: Column(
                 children: [
-                  LabelWithSeeAll(label: "All Products"),
+                  LabelWithSeeAll(
+                    label: "All Products",
+                    seeAllPressedRoute: 'welcome/',
+                  ),
                   ProductYAxisSectionBuilder(
                     products: products,
                   ),
