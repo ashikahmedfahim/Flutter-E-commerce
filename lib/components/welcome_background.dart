@@ -4,7 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeBackground extends StatelessWidget {
   final Column welcomeView;
-  WelcomeBackground({required this.welcomeView});
+  WelcomeBackground({Key? key, required this.welcomeView}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;

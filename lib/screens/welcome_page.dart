@@ -3,6 +3,7 @@ import '../components/welcome_background.dart';
 import '../constants.dart';
 
 class WelcomePage extends StatefulWidget {
+  const WelcomePage({Key? key}) : super(key: key);
   @override
   _WelcomePageState createState() => _WelcomePageState();
 }
