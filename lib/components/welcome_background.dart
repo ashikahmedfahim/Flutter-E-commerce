@@ -9,6 +9,12 @@ class WelcomeBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        brightness: Brightness.dark,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Container(
         child: Stack(
           children: [
