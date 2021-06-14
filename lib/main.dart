@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Lacuna',
-      routes: lacunaRoutes,
+      onGenerateRoute: lacunaGeneratedRoutes,
       initialRoute: '/',
       theme: ThemeData(
         primarySwatch: Colors.indigo,

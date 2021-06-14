@@ -1,50 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/constants.dart';
+import 'package:lacuna/mock_data/data.dart';
 
 class ProductDetailsPage extends StatefulWidget {
-  const ProductDetailsPage({Key? key}) : super(key: key);
+  final Product product;
+  const ProductDetailsPage({Key? key, required this.product}) : super(key: key);
 
   @override
-  _ProductDetailsPageState createState() => _ProductDetailsPageState();
+  _ProductDetailsPageState createState() =>
+      _ProductDetailsPageState(product: product);
 }
 
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
+  Product product;
+  _ProductDetailsPageState({required this.product});
+
   int productCount = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(68.0),
-        child: AppBar(
-          brightness: Brightness.dark,
-          backgroundColor: kPrimaryColor,
-          leading: IconButton(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 22.0),
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pushNamed(context, 'home/'),
-          ),
-          title: Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 15.0),
-              child: Text(
-                'Product Details',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          ),
-          actions: [
-            IconButton(
-              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 22.0),
-              onPressed: () {},
-              icon: Icon(
-                Icons.notifications,
-              ),
-            ),
-          ],
-        ),
+      appBar: NormalAppBar(
+        appBar: AppBar(),
+        title: 'Product Details',
+        route: '/',
+        icon: Icon(Icons.notifications),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 25.0),
@@ -58,53 +38,45 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Material(
-                      child: Ink(
-                        decoration: const ShapeDecoration(
-                          color: kShareIconBackground,
-                          shape: CircleBorder(),
-                        ),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.share,
-                            color: kDarkTextColor,
-                          ),
-                          color: kShareIconBackground,
-                        ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(13),
+                        primary: kShareIconBackground,
                       ),
+                      child: Icon(
+                        Icons.share,
+                      ),
+                      onPressed: () {},
                     ),
                     Center(
                         child: Image(
+                            fit: BoxFit.fill,
                             image: AssetImage('assets/images/latestTwo.png'))),
-                    Material(
-                      child: Ink(
-                        decoration: const ShapeDecoration(
-                          color: kFavoriteIconBackground,
-                          shape: CircleBorder(),
-                        ),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.favorite,
-                            color: kDarkTextColor,
-                          ),
-                        ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(13),
+                        primary: kFavoriteIconBackground,
                       ),
+                      child: Icon(
+                        Icons.favorite,
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 28.0),
+              padding: EdgeInsets.symmetric(vertical: 28.0),
               child: Text(
-                'Product Title',
+                product.title,
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
