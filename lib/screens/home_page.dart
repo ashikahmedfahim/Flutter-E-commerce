@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/components/label_with_see_all.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/components/appbar_with_search_bar.dart';
-import 'package:lacuna/widgets/category_x_axis_section_builder.dart';
-import 'package:lacuna/widgets/product_x_axis_section_builder.dart';
-import 'package:lacuna/widgets/product_y_axis_section_builder.dart';
+import 'package:lacuna/widget_builder/category_x_axis_section_builder.dart';
+import 'package:lacuna/widget_builder/product_x_axis_section_builder.dart';
+import 'package:lacuna/widget_builder/product_y_axis_section_builder.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
