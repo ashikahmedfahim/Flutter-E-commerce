@@ -3,8 +3,8 @@ import 'package:http/retry.dart';
 import 'package:http/http.dart' as http;
 
 class APICrud {
+  final client = RetryClient(http.Client());
   Future<void> apiTemplate() async {
-    final client = RetryClient(http.Client());
     try {
       print(await client.read(productsAPIURL));
     } finally {
