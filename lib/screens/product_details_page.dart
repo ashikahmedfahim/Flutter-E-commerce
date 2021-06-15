@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
-import 'package:lacuna/mock_data/data.dart';
-import '../widgets/offer_section_builder.dart';
+import '../widget_builder/offer_section_builder.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   final Product product;
