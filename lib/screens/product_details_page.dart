@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
+import 'package:lacuna/mock_data/data.dart';
+import '../widgets/offer_section_builder.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   const ProductDetailsPage({Key? key}) : super(key: key);
@@ -49,6 +51,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 25.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               height: 204,
@@ -222,7 +225,18 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ),
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: Text(
+                'Select Offer',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            OfferSectionBuilder(offers: offers),
           ],
         ),
       ),

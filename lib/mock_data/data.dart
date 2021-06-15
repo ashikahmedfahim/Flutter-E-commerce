@@ -71,3 +71,17 @@ final List<Product> products = [
     reviewCount: 45,
   ),
 ];
+
+class Offer {
+  Offer({required this.min, required this.max, required this.price});
+  int min;
+  int max;
+  double price;
+}
+
+final List<Offer> offers = [
+  Offer(min: 0, max: 100, price: 28.35),
+  Offer(min: 101, max: 200, price: 20.35),
+  Offer(min: 201, max: 300, price: 15.15),
+  Offer(min: 301, max: 400, price: 12.55),
+];
