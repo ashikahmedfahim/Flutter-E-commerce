@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Category {
   Category({required this.title, required this.imgUrl});
 
@@ -84,4 +86,30 @@ final List<Offer> offers = [
   Offer(min: 101, max: 200, price: 20.35),
   Offer(min: 201, max: 300, price: 15.15),
   Offer(min: 301, max: 400, price: 12.55),
+];
+
+class Variation {
+  Variation({required this.size});
+  int size;
+}
+
+final List<Variation> variations = [
+  Variation(size: 14),
+  Variation(size: 18),
+  Variation(size: 22),
+  Variation(size: 24),
+];
+
+class VarientColor {
+  VarientColor({required this.varientColor});
+  Color varientColor;
+}
+
+final List<VarientColor> varientColors = [
+  VarientColor(varientColor: Color(0xff050f2c)),
+  VarientColor(varientColor: Color(0xff003666)),
+  VarientColor(varientColor: Color(0xff00aeff)),
+  VarientColor(varientColor: Color(0xffff6c5f)),
+  VarientColor(varientColor: Color(0xffff4f81)),
+  VarientColor(varientColor: Color(0xffffc168)),
 ];
