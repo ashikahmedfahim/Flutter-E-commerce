@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/components/product_details_main_button.dart';
+import 'package:lacuna/components/text_title.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/widget_builder/color_section_builder.dart';
@@ -203,38 +205,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
-                child: Text(
-                  'Select Offer',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              TextTitle(title: 'Select Offer'),
               OfferSectionBuilder(offers: offers),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
-                child: Text(
-                  'Select Inches',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              TextTitle(title: 'Select Inches'),
               InchesSectionBuilder(variations: variations),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
-                child: Text(
-                  'Select Color',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              TextTitle(title: 'Select Color'),
               ColorSectionBuilder(varientColors: varientColors),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 34.0),
@@ -270,6 +245,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ],
                 ),
               ),
+              Text(
+                'Product description will be placed here. Product description will be placed here. ',
+                style: TextStyle(fontSize: 14.0),
+              ),
+              TextTitle(title: 'Tags'),
             ],
           ),
         ),
