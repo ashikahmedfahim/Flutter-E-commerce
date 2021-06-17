@@ -23,6 +23,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   int productCount = 1;
   @override
   Widget build(BuildContext context) {
+    var windowSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: NormalAppBar(
         appBar: AppBar(),
@@ -240,8 +241,32 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProductDetailsMainButton(buttonName: 'Add To Cart'),
-                    ProductDetailsMainButton(buttonName: 'Buy Now'),
+                    ProductDetailsMainButton(
+                        buttonName: 'Add To Cart',
+                        buttonWidth: (windowSize.width / 2) - 20),
+                    ProductDetailsMainButton(
+                        buttonName: 'Buy Now',
+                        buttonWidth: (windowSize.width / 2) - 20),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 2.0,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 32.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ProductDetailsMainButton(
+                        buttonName: 'Description',
+                        buttonWidth: (windowSize.width / 3) - 20),
+                    ProductDetailsMainButton(
+                        buttonName: 'Specification',
+                        buttonWidth: (windowSize.width / 3) - 20),
+                    ProductDetailsMainButton(
+                        buttonName: 'Videos',
+                        buttonWidth: (windowSize.width / 3) - 20),
                   ],
                 ),
               ),

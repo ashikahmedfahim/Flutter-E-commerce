@@ -3,13 +3,15 @@ import 'package:lacuna/constants.dart';
 
 class ProductDetailsMainButton extends StatelessWidget {
   final String buttonName;
-  const ProductDetailsMainButton({Key? key, required this.buttonName})
+  final double buttonWidth;
+  const ProductDetailsMainButton(
+      {Key? key, required this.buttonName, required this.buttonWidth})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 180,
+      width: buttonWidth,
       child: TextButton(
         onPressed: () {},
         style: TextButton.styleFrom(
@@ -18,7 +20,6 @@ class ProductDetailsMainButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 10.0,
-            horizontal: 35.0,
           ),
           child: Text(
             buttonName,
