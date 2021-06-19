@@ -113,3 +113,16 @@ final List<VarientColor> varientColors = [
   VarientColor(varientColor: Color(0xffff4f81)),
   VarientColor(varientColor: Color(0xffffc168)),
 ];
+
+class TagName {
+  TagName({required this.tagName});
+  String tagName;
+}
+
+final List<TagName> tags = [
+  TagName(tagName: 'Laptop'),
+  TagName(tagName: 'Computer'),
+  TagName(tagName: 'Desktop'),
+  TagName(tagName: 'Acer'),
+  TagName(tagName: 'Dell'),
+];
