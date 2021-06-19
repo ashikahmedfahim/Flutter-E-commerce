@@ -126,3 +126,26 @@ final List<TagName> tags = [
   TagName(tagName: 'Acer'),
   TagName(tagName: 'Dell'),
 ];
+
+final List titles = [
+  'Product Type',
+  'Processor',
+  'Ram',
+  'Hard Disk',
+  'Display Size',
+  'Display Resolution',
+  'Display Technology',
+  'Connectivity',
+  'Operating System'
+];
+final List titleValues = [
+  'Laptop',
+  'Intel Core I3',
+  '8GB',
+  '256GB SSD',
+  '14\"',
+  '1920*1080',
+  'LED',
+  'USB 3.0',
+  'Windows 10'
+];

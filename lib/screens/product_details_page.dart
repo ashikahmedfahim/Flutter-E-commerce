@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/components/product_details_main_button.dart';
+import 'package:lacuna/components/table_builder.dart';
 import 'package:lacuna/components/tags_builder.dart';
 import 'package:lacuna/components/text_title.dart';
 import 'package:lacuna/constants.dart';
@@ -252,6 +253,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
               ),
               TextTitle(title: 'Tags'),
               tagsBuilder(),
+              TableBuilder(titles: titles, titleValues: titleValues),
             ],
           ),
         ),
