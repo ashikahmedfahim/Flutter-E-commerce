@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xilo.ucqato.lacuna">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Lacuna"
         android:icon="@mipmap/launcher_icon">

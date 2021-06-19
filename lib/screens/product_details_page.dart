@@ -5,6 +5,7 @@ import 'package:lacuna/components/product_details_main_button.dart';
 import 'package:lacuna/components/table_builder.dart';
 import 'package:lacuna/components/tags_builder.dart';
 import 'package:lacuna/components/text_title.dart';
+import 'package:lacuna/components/video_player_builder.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/widget_builder/color_section_builder.dart';
@@ -22,6 +23,8 @@ class ProductDetailsPage extends StatefulWidget {
 
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
   Product product;
+  String selectedButton = 'Description';
+  String selectedActionButton = '';
   _ProductDetailsPageState({required this.product});
 
   int productCount = 1;
@@ -219,11 +222,30 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ProductDetailsMainButton(
-                        buttonName: 'Add To Cart',
-                        buttonWidth: (windowSize.width / 2) - 20),
+                      buttonName: 'Add To Cart',
+                      buttonWidth: (windowSize.width / 2) - 20,
+                      buttonBackgroundColor:
+                          selectedActionButton == 'Add To Cart'
+                              ? kPrimaryColor
+                              : Colors.white,
+                      setView: () {
+                        setState(() {
+                          selectedActionButton = 'Add To Cart';
+                        });
+                      },
+                    ),
                     ProductDetailsMainButton(
-                        buttonName: 'Buy Now',
-                        buttonWidth: (windowSize.width / 2) - 20),
+                      buttonName: 'Buy Now',
+                      buttonWidth: (windowSize.width / 2) - 20,
+                      buttonBackgroundColor: selectedActionButton == 'Buy Now'
+                          ? kPrimaryColor
+                          : Colors.white,
+                      setView: () {
+                        setState(() {
+                          selectedActionButton = 'Buy Now';
+                        });
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -236,24 +258,54 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ProductDetailsMainButton(
-                        buttonName: 'Description',
-                        buttonWidth: (windowSize.width / 3) - 20),
+                      buttonName: 'Description',
+                      buttonWidth: (windowSize.width / 3) - 20,
+                      buttonBackgroundColor: selectedButton == 'Description'
+                          ? kPrimaryColor
+                          : Colors.white,
+                      setView: () {
+                        setState(() {
+                          selectedButton = 'Description';
+                        });
+                      },
+                    ),
                     ProductDetailsMainButton(
-                        buttonName: 'Specification',
-                        buttonWidth: (windowSize.width / 3) - 20),
+                      buttonName: 'Specification',
+                      buttonWidth: (windowSize.width / 3) - 20,
+                      buttonBackgroundColor: selectedButton == 'Specification'
+                          ? kPrimaryColor
+                          : Colors.white,
+                      setView: () {
+                        setState(() {
+                          selectedButton = 'Specification';
+                        });
+                      },
+                    ),
                     ProductDetailsMainButton(
-                        buttonName: 'Videos',
-                        buttonWidth: (windowSize.width / 3) - 20),
+                      buttonName: 'Videos',
+                      buttonWidth: (windowSize.width / 3) - 20,
+                      buttonBackgroundColor: selectedButton == 'Videos'
+                          ? kPrimaryColor
+                          : Colors.white,
+                      setView: () {
+                        setState(() {
+                          selectedButton = 'Videos';
+                        });
+                      },
+                    ),
                   ],
                 ),
               ),
-              Text(
-                'Product description will be placed here. Product description will be placed here. ',
-                style: TextStyle(fontSize: 14.0),
-              ),
+              selectedButton == 'Description'
+                  ? Text(
+                      'Product description will be placed here. Product description will be placed here. ',
+                      style: TextStyle(fontSize: 14.0),
+                    )
+                  : selectedButton == 'Specification'
+                      ? TableBuilder(titles: titles, titleValues: titleValues)
+                      : VideoApp(),
               TextTitle(title: 'Tags'),
               tagsBuilder(),
-              TableBuilder(titles: titles, titleValues: titleValues),
             ],
           ),
         ),

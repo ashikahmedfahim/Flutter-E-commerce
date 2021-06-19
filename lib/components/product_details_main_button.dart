@@ -4,17 +4,24 @@ import 'package:lacuna/constants.dart';
 class ProductDetailsMainButton extends StatelessWidget {
   final String buttonName;
   final double buttonWidth;
-  const ProductDetailsMainButton(
-      {Key? key, required this.buttonName, required this.buttonWidth})
-      : super(key: key);
+  final Color buttonBackgroundColor;
+  final VoidCallback setView;
+  const ProductDetailsMainButton({
+    Key? key,
+    required this.buttonName,
+    required this.buttonWidth,
+    required this.buttonBackgroundColor,
+    required this.setView,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: buttonWidth,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () => setView(),
         style: TextButton.styleFrom(
+          backgroundColor: buttonBackgroundColor,
           side: BorderSide(color: kPrimaryColor, width: 1.5),
         ),
         child: Padding(
@@ -26,7 +33,9 @@ class ProductDetailsMainButton extends StatelessWidget {
             style: TextStyle(
               fontSize: 17.0,
               fontWeight: FontWeight.w600,
-              color: kPrimaryColor,
+              color: buttonBackgroundColor == kPrimaryColor
+                  ? kDarkTextColor
+                  : kPrimaryColor,
             ),
           ),
         ),
