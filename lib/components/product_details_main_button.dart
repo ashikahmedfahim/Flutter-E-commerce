@@ -6,12 +6,14 @@ class ProductDetailsMainButton extends StatelessWidget {
   final double buttonWidth;
   final Color buttonBackgroundColor;
   final VoidCallback setView;
+  final String routeString;
   const ProductDetailsMainButton({
     Key? key,
     required this.buttonName,
     required this.buttonWidth,
     required this.buttonBackgroundColor,
     required this.setView,
+    required this.routeString,
   }) : super(key: key);
 
   @override
@@ -19,7 +21,12 @@ class ProductDetailsMainButton extends StatelessWidget {
     return Container(
       width: buttonWidth,
       child: TextButton(
-        onPressed: () => setView(),
+        onPressed: () {
+          setView();
+          if (routeString != "") {
+            Navigator.pushReplacementNamed(context, routeString);
+          }
+        },
         style: TextButton.styleFrom(
           backgroundColor: buttonBackgroundColor,
           side: BorderSide(color: kPrimaryColor, width: 1.5),

@@ -233,6 +233,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           selectedActionButton = 'Add To Cart';
                         });
                       },
+                      routeString: "cart/",
                     ),
                     ProductDetailsMainButton(
                       buttonName: 'Buy Now',
@@ -245,6 +246,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           selectedActionButton = 'Buy Now';
                         });
                       },
+                      routeString: "welcome/",
                     ),
                   ],
                 ),
@@ -268,31 +270,32 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           selectedButton = 'Description';
                         });
                       },
+                      routeString: "",
                     ),
                     ProductDetailsMainButton(
-                      buttonName: 'Specification',
-                      buttonWidth: (windowSize.width / 3) - 20,
-                      buttonBackgroundColor: selectedButton == 'Specification'
-                          ? kPrimaryColor
-                          : Colors.white,
-                      setView: () {
-                        setState(() {
-                          selectedButton = 'Specification';
-                        });
-                      },
-                    ),
+                        buttonName: 'Specification',
+                        buttonWidth: (windowSize.width / 3) - 20,
+                        buttonBackgroundColor: selectedButton == 'Specification'
+                            ? kPrimaryColor
+                            : Colors.white,
+                        setView: () {
+                          setState(() {
+                            selectedButton = 'Specification';
+                          });
+                        },
+                        routeString: ""),
                     ProductDetailsMainButton(
-                      buttonName: 'Videos',
-                      buttonWidth: (windowSize.width / 3) - 20,
-                      buttonBackgroundColor: selectedButton == 'Videos'
-                          ? kPrimaryColor
-                          : Colors.white,
-                      setView: () {
-                        setState(() {
-                          selectedButton = 'Videos';
-                        });
-                      },
-                    ),
+                        buttonName: 'Videos',
+                        buttonWidth: (windowSize.width / 3) - 20,
+                        buttonBackgroundColor: selectedButton == 'Videos'
+                            ? kPrimaryColor
+                            : Colors.white,
+                        setView: () {
+                          setState(() {
+                            selectedButton = 'Videos';
+                          });
+                        },
+                        routeString: ""),
                   ],
                 ),
               ),

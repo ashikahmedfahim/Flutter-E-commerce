@@ -19,11 +19,13 @@ class NormalAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 20.0,
-          fontWeight: FontWeight.w500,
+      title: Center(
+        child: Text(
+          title,
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
       actions: [
