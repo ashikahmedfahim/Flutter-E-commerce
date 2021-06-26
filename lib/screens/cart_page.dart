@@ -167,7 +167,7 @@ class _CartPageState extends State<CartPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: SizedBox(
-                  height: 50.0,
+                  height: 60.0,
                   width: double.infinity,
                   child: TextButton(
                     onPressed: () {},
@@ -178,8 +178,9 @@ class _CartPageState extends State<CartPage> {
                       child: Text(
                         "Checkout",
                         style: TextStyle(
-                          fontSize: 16.0,
+                          fontSize: 18.0,
                           fontWeight: FontWeight.w500,
+                          letterSpacing: 1.2,
                           color: kDarkTextColor,
                         ),
                       ),
