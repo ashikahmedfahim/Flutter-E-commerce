@@ -80,18 +80,17 @@ class _CartSingleProductState extends State<CartSingleProduct> {
                             ),
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                   vertical: 5.0,
-                                  horizontal: 0,
                                 ),
                                 child: GestureDetector(
                                   onTap: () {
                                     print('hello');
                                   },
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Icon(
                                         Icons.favorite,
@@ -109,16 +108,14 @@ class _CartSingleProductState extends State<CartSingleProduct> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.symmetric(
+                                padding: EdgeInsets.symmetric(
                                   vertical: 5.0,
-                                  horizontal: 0,
                                 ),
                                 child: GestureDetector(
                                   onTap: () {
                                     print('hello');
                                   },
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Icon(
                                         Icons.delete_forever,

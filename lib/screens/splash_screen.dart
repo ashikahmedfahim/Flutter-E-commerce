@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:lacuna/services/shared_preferences.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  _RootPageState createState() => _RootPageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _RootPageState extends State<RootPage> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     redirectPage();
   }
 
-  Future<void> redirectPage() async => new Future.delayed(
-        const Duration(seconds: 2),
-        () => {
-          MySharedPreferences.instance.getStringValue("auth_token").then(
-                (value) => {
-                  (value.isEmpty || value.length == 0)
-                      ? Navigator.pushReplacementNamed(context, "home/")
-                      //replace with login when api ready
-                      : Navigator.pushReplacementNamed(context, "home/")
-                },
-              )
-        },
-      );
-
+  Future<void> redirectPage() async =>
+      new Future.delayed(const Duration(seconds: 2), () => {
+        Navigator.pushReplacementNamed(context, "home/")
+      });
   @override
   Widget build(BuildContext context) {
     return Scaffold(

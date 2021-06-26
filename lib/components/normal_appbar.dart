@@ -4,35 +4,34 @@ import 'package:lacuna/constants.dart';
 class NormalAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AppBar appBar;
   final String title;
-  final Icon icon;
-  final String route;
-  const NormalAppBar({
-    Key? key,
-    required this.appBar,
-    required this.title,
-    required this.icon,
-    required this.route,
-  }) : super(key: key);
+  final bool disableIcon;
+  const NormalAppBar(
+      {Key? key,
+      required this.appBar,
+      required this.title,
+      required this.disableIcon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: true,
       brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
-      title: Center(
-        child: Text(
-          title,
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.w500,
-          ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.w500,
         ),
       ),
       actions: [
-        IconButton(
-          onPressed: () => Navigator.pushNamed(context, route),
-          icon: icon,
-        ),
+        !disableIcon
+            ? IconButton(
+                onPressed: () => Navigator.pushNamed(context, 'cart/'),
+                icon: Icon(Icons.shopping_bag),
+              )
+            : Center(),
       ],
     );
   }

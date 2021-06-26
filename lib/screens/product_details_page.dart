@@ -5,6 +5,7 @@ import 'package:lacuna/components/product_details_main_button.dart';
 import 'package:lacuna/components/table_builder.dart';
 import 'package:lacuna/components/tags_builder.dart';
 import 'package:lacuna/components/text_title.dart';
+import 'package:lacuna/components/toast.dart';
 import 'package:lacuna/components/video_player_builder.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
@@ -35,8 +36,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       appBar: NormalAppBar(
         appBar: AppBar(),
         title: 'Product Details',
-        route: '/',
-        icon: Icon(Icons.notifications),
+        disableIcon: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -229,11 +229,12 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                               ? kPrimaryColor
                               : Colors.white,
                       setView: () {
+                        showToast("Added To Cart");
                         setState(() {
                           selectedActionButton = 'Add To Cart';
                         });
                       },
-                      routeString: "cart/",
+                      routeString: "",
                     ),
                     ProductDetailsMainButton(
                       buttonName: 'Buy Now',
@@ -246,7 +247,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           selectedActionButton = 'Buy Now';
                         });
                       },
-                      routeString: "welcome/",
+                      routeString: "cart/",
                     ),
                   ],
                 ),
@@ -273,7 +274,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       routeString: "",
                     ),
                     ProductDetailsMainButton(
-                        buttonName: 'Specification',
+                        buttonName: 'Spec.',
                         buttonWidth: (windowSize.width / 3) - 20,
                         buttonBackgroundColor: selectedButton == 'Specification'
                             ? kPrimaryColor

@@ -18,9 +18,8 @@ class _CartPageState extends State<CartPage> {
     return Scaffold(
       appBar: NormalAppBar(
         appBar: AppBar(),
-        title: 'Product Details',
-        route: '/',
-        icon: Icon(Icons.notifications),
+        title: 'Cart',
+        disableIcon: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -47,7 +46,7 @@ class _CartPageState extends State<CartPage> {
                             kGreyText,
                           ),
                           cartFinalText(
-                            "124.21",
+                            "\$124.21",
                             16.0,
                             FontWeight.bold,
                             kPrimaryColor,
@@ -64,7 +63,7 @@ class _CartPageState extends State<CartPage> {
                             kGreyText,
                           ),
                           cartFinalText(
-                            "4954.21",
+                            "\$4954.21",
                             16.0,
                             FontWeight.bold,
                             kPrimaryColor,
@@ -81,7 +80,7 @@ class _CartPageState extends State<CartPage> {
                             kGreyText,
                           ),
                           cartFinalText(
-                            "24.21",
+                            "\$24.21",
                             16.0,
                             FontWeight.bold,
                             kPrimaryColor,
@@ -98,7 +97,7 @@ class _CartPageState extends State<CartPage> {
                             kRedColor,
                           ),
                           cartFinalText(
-                            "8634.21",
+                            "\$8634.21",
                             16.0,
                             FontWeight.bold,
                             kRedColor,
@@ -170,7 +169,7 @@ class _CartPageState extends State<CartPage> {
                   height: 60.0,
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.pushNamed(context, 'authCheck/'),
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimaryColor,
                     ),

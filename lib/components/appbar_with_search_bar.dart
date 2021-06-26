@@ -36,7 +36,7 @@ class AppBarWithSearchBar extends StatelessWidget {
             top: 18.0,
           ),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, 'cart/'),
             child: Badge(
               badgeColor: kSecondaryTextColor,
               badgeContent: Text(

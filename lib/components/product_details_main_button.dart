@@ -24,7 +24,7 @@ class ProductDetailsMainButton extends StatelessWidget {
         onPressed: () {
           setView();
           if (routeString != "") {
-            Navigator.pushReplacementNamed(context, routeString);
+            Navigator.pushNamed(context, routeString);
           }
         },
         style: TextButton.styleFrom(
