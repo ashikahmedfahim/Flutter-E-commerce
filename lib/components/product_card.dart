@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lacuna/components/toast.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 
@@ -78,7 +79,7 @@ class ProductCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(7), // <-- Radius
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () => showToast("Added to cart"),
                   child: Text(
                     'Add To Cart',
                     style: TextStyle(fontSize: 12.0, color: kDarkTextColor),

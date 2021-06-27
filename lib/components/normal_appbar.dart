@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:lacuna/constants.dart';
 
@@ -27,9 +28,22 @@ class NormalAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         !disableIcon
-            ? IconButton(
+            ? TextButton(
                 onPressed: () => Navigator.pushNamed(context, 'cart/'),
-                icon: Icon(Icons.shopping_bag),
+                child: Badge(
+                  badgeColor: kSecondaryTextColor,
+                  badgeContent: Text(
+                    '3',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.shopping_bag,
+                    color: kDarkTextColor,
+                    size: 30,
+                  ),
+                ),
               )
             : Center(),
       ],
