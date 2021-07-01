@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(138.0),
+        preferredSize: const Size.fromHeight(150.0),
         child: AppBarWithSearchBar(),
       ),
       body: Padding(
