@@ -106,7 +106,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     Column(
                       children: [
                         Text(
-                          '\$230',
+                          '\$220',
                           style: TextStyle(
                             color: kFavoriteIconBackground,
                             fontSize: 22.0,
