@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 const kShareIconBackground = Color(0xff0899e5);
 const kFavoriteIconBackground = Color(0xfffa4248);
 const kProductDetailsImageBackground = Color(0xfff5f5f5);
+const kProfileImageBackground = Color(0xfff7f8f8);
 const kGrey = Color(0xffbcc3ca);
 const kGreyBackground = Color(0xf6c6c6c);
 const kGreyText = Color(0xff5b5b5b);

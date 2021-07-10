@@ -14,7 +14,7 @@ class AppBarWithSearchBar extends StatelessWidget {
       leading: Padding(
         padding: EdgeInsets.only(top: 18.0),
         child: IconButton(
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, 'profile/'),
           icon: Icon(
             Icons.menu_outlined,
             size: 30,

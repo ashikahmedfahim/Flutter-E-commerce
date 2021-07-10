@@ -4,6 +4,7 @@ import 'package:lacuna/screens/cart_page.dart';
 import 'package:lacuna/screens/checkout_page.dart';
 import 'package:lacuna/screens/home_page.dart';
 import 'package:lacuna/screens/product_details_page.dart';
+import 'package:lacuna/screens/profile_page.dart';
 import 'package:lacuna/services/auth_check.dart';
 import 'package:lacuna/screens/signup_additional_page.dart';
 import 'package:lacuna/screens/signin_page.dart';
@@ -23,6 +24,7 @@ Route<dynamic> lacunaGeneratedRoutes(RouteSettings settings) {
         ),
     'cart/': (context) => CartPage(),
     'checkout/': (context) => CheckOutPage(),
+    'profile/': (context) => ProfilePage(),
   };
   var builder = lacunaRoutes[settings.name];
   return MaterialPageRoute(builder: (ctx) => builder!(ctx));
