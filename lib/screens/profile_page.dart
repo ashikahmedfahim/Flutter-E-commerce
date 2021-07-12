@@ -104,7 +104,8 @@ class ProfilePage extends StatelessWidget {
                                 BorderRadius.circular(7), // <-- Radius
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushReplacementNamed(context, 'home/'),
                         child: const Text(
                           'Logout',
                           style: TextStyle(
