@@ -8,20 +8,22 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
   cupertino_icons: ^1.0.3
-  http: ^0.13.3
-  shared_preferences: ^2.0.5
   badges: ^2.0.1
   flutter_svg: ^0.22.0
   fluttertoast: ^8.0.7
+  http: ^0.13.3
+  shared_preferences: ^2.0.5
   video_player: ^2.1.6
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.9.0
   flutter_test:
     sdk: flutter
+  import_sorter: ^4.6.0
+  flutter_lints: ^1.0.4
+  flutter_launcher_icons: ^0.9.0
 
 flutter_launcher_name:
   name: "Lacuna"
@@ -42,4 +44,3 @@ flutter:
 #        - asset: assets/fonts/Roboto-Regular.ttf
 #        - asset: assets/fonts/Roboto-Bold.ttf
 #          weight: 700
-

@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/welcome_background.dart';
 import 'package:lacuna/constants.dart';
 
@@ -21,7 +24,7 @@ class _SignUpAdditionalInformationPageState
 Column signUpAdditionalView(BuildContext context) {
   return Column(
     children: [
-      Text(
+      const Text(
         'Additional Information',
         style: TextStyle(
           color: Color(0xff222222),
@@ -30,9 +33,9 @@ Column signUpAdditionalView(BuildContext context) {
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 20.0, bottom: 32.0),
+        padding: const EdgeInsets.only(top: 20.0, bottom: 32.0),
         child: Column(
-          children: [
+          children: const [
             Text(
               'To get more advantages create your account',
               style: TextStyle(
@@ -51,187 +54,187 @@ Column signUpAdditionalView(BuildContext context) {
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Country Name',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.flag,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Country Code',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.location_on,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your State',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.pin_drop_rounded,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your City',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.apartment,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Postal Code ',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.all_inbox,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Street',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.navigation,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 30.0),
+        padding: const EdgeInsets.symmetric(vertical: 30.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
@@ -242,7 +245,8 @@ Column signUpAdditionalView(BuildContext context) {
           ),
           child: TextButton(
             onPressed: () => Navigator.pushNamed(context, 'home/'),
-            child: Text(
+            style: const ButtonStyle(),
+            child: const Text(
               'Sign Up',
               style: TextStyle(
                 fontSize: 17.0,
@@ -250,14 +254,13 @@ Column signUpAdditionalView(BuildContext context) {
                 color: kDarkTextColor,
               ),
             ),
-            style: ButtonStyle(),
           ),
         ),
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Already have an account?',
             style: TextStyle(color: kGreyText, fontSize: 16.0),
           ),
@@ -265,7 +268,7 @@ Column signUpAdditionalView(BuildContext context) {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: TextButton(
               onPressed: () => Navigator.pushNamed(context, 'signin/'),
-              child: Text(
+              child: const Text(
                 'Sign In',
                 style: TextStyle(
                   color: kPrimaryColor,

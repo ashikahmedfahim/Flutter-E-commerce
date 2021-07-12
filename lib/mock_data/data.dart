@@ -1,3 +1,4 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 class Category {
@@ -106,12 +107,12 @@ class VarientColor {
 }
 
 final List<VarientColor> varientColors = [
-  VarientColor(varientColor: Color(0xff050f2c)),
-  VarientColor(varientColor: Color(0xff003666)),
-  VarientColor(varientColor: Color(0xff00aeff)),
-  VarientColor(varientColor: Color(0xffff6c5f)),
-  VarientColor(varientColor: Color(0xffff4f81)),
-  VarientColor(varientColor: Color(0xffffc168)),
+  VarientColor(varientColor: const Color(0xff050f2c)),
+  VarientColor(varientColor: const Color(0xff003666)),
+  VarientColor(varientColor: const Color(0xff00aeff)),
+  VarientColor(varientColor: const Color(0xffff6c5f)),
+  VarientColor(varientColor: const Color(0xffff4f81)),
+  VarientColor(varientColor: const Color(0xffffc168)),
 ];
 
 class TagName {
@@ -143,7 +144,7 @@ final List titleValues = [
   'Intel Core I3',
   '8GB',
   '256GB SSD',
-  '14\"',
+  '14"',
   '1920*1080',
   'LED',
   'USB 3.0',

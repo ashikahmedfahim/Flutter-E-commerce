@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/horizontal_line.dart';
 import 'package:lacuna/constants.dart';
 
@@ -12,25 +15,25 @@ class SocialLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 30.0),
+      padding: const EdgeInsets.only(top: 30.0),
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Row(
               children: [
-                HorizontalLine(),
+                const HorizontalLine(),
                 Text(
                   socialLoginText,
-                  style: TextStyle(color: kGreyText, fontSize: 16.0),
+                  style: const TextStyle(color: kGreyText, fontSize: 16.0),
                 ),
-                HorizontalLine(),
+                const HorizontalLine(),
               ],
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 9, vertical: 18.0),
                 child: Image(

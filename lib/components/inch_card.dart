@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/constants.dart';
 import '../mock_data/data.dart';
 
@@ -24,13 +27,13 @@ class _InchCardState extends State<InchCard> {
           ),
         ),
         child: GestureDetector(
-          onTap: () => null,
+          onTap: () => {},
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Center(
               child: Text(
-                widget.variation.size.toString() + "\"" + " inches",
-                style: TextStyle(fontSize: 15.0, color: kGreyText),
+                '${widget.variation.size}" inches',
+                style: const TextStyle(fontSize: 15.0, color: kGreyText),
               ),
             ),
           ),

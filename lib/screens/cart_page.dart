@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/cart_single_product.dart';
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/constants.dart';
@@ -14,7 +17,7 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: NormalAppBar(
         appBar: AppBar(),
@@ -26,12 +29,12 @@ class _CartPageState extends State<CartPage> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              CartSingleProduct(),
-              CartSingleProduct(),
-              CartSingleProduct(),
+              const CartSingleProduct(),
+              const CartSingleProduct(),
+              const CartSingleProduct(),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Container(
+                child: SizedBox(
                   height: 100.0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,21 +122,22 @@ class _CartPageState extends State<CartPage> {
                       child: TextField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+                          contentPadding:
+                              const EdgeInsets.symmetric(vertical: 5.0),
                           fillColor: kDarkTextColor,
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             color: kGreyText,
                           ),
                           filled: true,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               width: 0.8,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               width: 0.8,
                               color: kPrimaryColor,
                             ),
@@ -150,7 +154,7 @@ class _CartPageState extends State<CartPage> {
                         style: TextButton.styleFrom(
                           backgroundColor: kPrimaryColor,
                         ),
-                        child: Text(
+                        child: const Text(
                           "Apply",
                           style: TextStyle(
                             fontSize: 16.0,
@@ -173,7 +177,7 @@ class _CartPageState extends State<CartPage> {
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimaryColor,
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Checkout",
                         style: TextStyle(

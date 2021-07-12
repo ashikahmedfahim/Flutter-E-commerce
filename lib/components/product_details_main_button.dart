@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/constants.dart';
 
 class ProductDetailsMainButton extends StatelessWidget {
@@ -18,7 +21,7 @@ class ProductDetailsMainButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: buttonWidth,
       child: TextButton(
         onPressed: () {
@@ -29,7 +32,7 @@ class ProductDetailsMainButton extends StatelessWidget {
         },
         style: TextButton.styleFrom(
           backgroundColor: buttonBackgroundColor,
-          side: BorderSide(color: kPrimaryColor, width: 1.5),
+          side: const BorderSide(color: kPrimaryColor, width: 1.5),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(

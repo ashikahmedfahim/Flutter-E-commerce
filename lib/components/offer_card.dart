@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
 
@@ -24,7 +27,7 @@ class _OfferCardState extends State<OfferCard> {
           ),
         ),
         child: GestureDetector(
-          onTap: () => null,
+          onTap: () => {},
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
@@ -33,15 +36,15 @@ class _OfferCardState extends State<OfferCard> {
                 Row(
                   children: [
                     Text(
-                      widget.offer.min.toString() + ' - ',
-                      style: TextStyle(
+                      '${widget.offer.min} - ',
+                      style: const TextStyle(
                         color: kGreyText,
                         fontSize: 14.0,
                       ),
                     ),
                     Text(
-                      widget.offer.max.toString() + ' pcs',
-                      style: TextStyle(
+                      '${widget.offer.max} pcs',
+                      style: const TextStyle(
                         color: kGreyText,
                         fontSize: 14.0,
                       ),
@@ -49,8 +52,8 @@ class _OfferCardState extends State<OfferCard> {
                   ],
                 ),
                 Text(
-                  '\$' + widget.offer.price.toString(),
-                  style: TextStyle(
+                  '\$${widget.offer.price}',
+                  style: const TextStyle(
                     color: kPrimaryColor,
                     fontSize: 22.0,
                     fontWeight: FontWeight.bold,

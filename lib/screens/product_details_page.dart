@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/components/product_details_main_button.dart';
 import 'package:lacuna/components/table_builder.dart';
@@ -18,20 +21,16 @@ class ProductDetailsPage extends StatefulWidget {
   const ProductDetailsPage({Key? key, required this.product}) : super(key: key);
 
   @override
-  _ProductDetailsPageState createState() =>
-      _ProductDetailsPageState(product: product);
+  _ProductDetailsPageState createState() => _ProductDetailsPageState();
 }
 
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
-  Product product;
   String selectedButton = 'Description';
   String selectedActionButton = '';
-  _ProductDetailsPageState({required this.product});
-
   int productCount = 1;
   @override
   Widget build(BuildContext context) {
-    var windowSize = MediaQuery.of(context).size;
+    final windowSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: NormalAppBar(
         appBar: AppBar(),
@@ -40,7 +39,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 25.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 25.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -52,60 +51,60 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          shape: CircleBorder(),
-                          padding: EdgeInsets.all(13),
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(13),
                           primary: kShareIconBackground,
                         ),
-                        child: Icon(
+                        onPressed: () {},
+                        child: const Icon(
                           Icons.share,
                         ),
-                        onPressed: () {},
                       ),
-                      Center(
+                      const Center(
                           child: Image(
                               fit: BoxFit.fill,
                               image:
                                   AssetImage('assets/images/latestTwo.png'))),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          shape: CircleBorder(),
-                          padding: EdgeInsets.all(13),
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(13),
                           primary: kFavoriteIconBackground,
                         ),
-                        child: Icon(
+                        onPressed: () {},
+                        child: const Icon(
                           Icons.favorite,
                         ),
-                        onPressed: () {},
                       ),
                     ],
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 28.0),
+                padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: Text(
-                  product.title,
-                  style: TextStyle(
+                  widget.product.title,
+                  style: const TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 6.0),
+                padding: const EdgeInsets.symmetric(vertical: 6.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       children: [
-                        Text(
+                        const Text(
                           '\$220',
                           style: TextStyle(
                             color: kFavoriteIconBackground,
@@ -114,7 +113,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           ),
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text(
                               '\$240',
                               style: TextStyle(
@@ -162,8 +161,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                   });
                                 },
                                 padding: EdgeInsets.zero,
-                                constraints: BoxConstraints(),
-                                icon: Icon(
+                                constraints: const BoxConstraints(),
+                                icon: const Icon(
                                   Icons.remove,
                                   color: kDarkTextColor,
                                   size: 22.0,
@@ -174,7 +173,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           ),
                           Text(
                             productCount.toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20.0,
                               fontWeight: FontWeight.w500,
                             ),
@@ -194,8 +193,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                   });
                                 },
                                 padding: EdgeInsets.zero,
-                                constraints: BoxConstraints(),
-                                icon: Icon(
+                                constraints: const BoxConstraints(),
+                                icon: const Icon(
                                   Icons.add,
                                   color: kDarkTextColor,
                                   size: 22.0,
@@ -210,14 +209,14 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ],
                 ),
               ),
-              TextTitle(title: 'Select Offer'),
+              const TextTitle(title: 'Select Offer'),
               OfferSectionBuilder(offers: offers),
-              TextTitle(title: 'Select Inches'),
+              const TextTitle(title: 'Select Inches'),
               InchesSectionBuilder(variations: variations),
-              TextTitle(title: 'Select Color'),
+              const TextTitle(title: 'Select Color'),
               ColorSectionBuilder(varientColors: varientColors),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 34.0),
+                padding: const EdgeInsets.symmetric(vertical: 34.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -252,11 +251,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ],
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 2.0,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 32.0),
+                padding: const EdgeInsets.symmetric(vertical: 32.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -300,15 +299,16 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   ],
                 ),
               ),
-              selectedButton == 'Description'
-                  ? Text(
-                      'Product description will be placed here. Product description will be placed here. ',
-                      style: TextStyle(fontSize: 14.0),
-                    )
-                  : selectedButton == 'Specification'
-                      ? TableBuilder(titles: titles, titleValues: titleValues)
-                      : VideoApp(),
-              TextTitle(title: 'Tags'),
+              if (selectedButton == 'Description')
+                const Text(
+                  'Product description will be placed here. Product description will be placed here. ',
+                  style: TextStyle(fontSize: 14.0),
+                )
+              else
+                selectedButton == 'Specification'
+                    ? TableBuilder(titles: titles, titleValues: titleValues)
+                    : const VideoApp(),
+              const TextTitle(title: 'Tags'),
               tagsBuilder(),
             ],
           ),

@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/mock_data/data.dart';
 
 class ColorCard extends StatefulWidget {
@@ -21,8 +24,8 @@ class _ColorCardState extends State<ColorCard> {
           borderRadius: BorderRadius.circular(50.0),
         ),
         child: GestureDetector(
-          onTap: () => null,
-          child: Text(''),
+          onTap: () => {},
+          child: const Text(''),
         ),
       ),
     );

@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/normal_appbar.dart';
 import 'package:lacuna/constants.dart';
 
@@ -14,7 +17,7 @@ class ProfilePage extends StatelessWidget {
           disableIcon: false,
         ),
         body: Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               Container(
@@ -30,7 +33,7 @@ class ProfilePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: kDarkTextColor,
                           shape: BoxShape.circle,
                           boxShadow: [
@@ -41,7 +44,7 @@ class ProfilePage extends StatelessWidget {
                             )
                           ],
                         ),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 55,
                           backgroundColor: kDarkTextColor,
                           child: CircleAvatar(
@@ -51,14 +54,14 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Tanzir Fahad",
                         style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Narshingdi, Dhaka",
                         style: TextStyle(
                           fontSize: 14.0,
@@ -80,7 +83,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Logout',
                     style: TextStyle(
                       fontSize: 17.0,

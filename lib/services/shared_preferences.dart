@@ -1,33 +1,34 @@
+// Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MySharedPreferences {
   MySharedPreferences._privateConstructor();
 
-  static MySharedPreferences get instance =>
+  static final MySharedPreferences instance =
       MySharedPreferences._privateConstructor();
 
-  setStringValue(String key, String value) async {
-    SharedPreferences myPrefs = await SharedPreferences.getInstance();
+  Future<void> voidsetStringValue(String key, String value) async {
+    final SharedPreferences myPrefs = await SharedPreferences.getInstance();
     myPrefs.setString(key, value);
   }
 
   Future<String> getStringValue(String key) async {
-    SharedPreferences myPrefs = await SharedPreferences.getInstance();
+    final SharedPreferences myPrefs = await SharedPreferences.getInstance();
     return myPrefs.getString(key) ?? "";
   }
 
   Future<bool> containsKey(String key) async {
-    SharedPreferences myPrefs = await SharedPreferences.getInstance();
+    final SharedPreferences myPrefs = await SharedPreferences.getInstance();
     return myPrefs.containsKey(key);
   }
 
-  removeValue(String key) async {
-    SharedPreferences myPrefs = await SharedPreferences.getInstance();
+  Future<Future<bool>> removeValue(String key) async {
+    final SharedPreferences myPrefs = await SharedPreferences.getInstance();
     return myPrefs.remove(key);
   }
 
-  removeAll() async {
-    SharedPreferences myPrefs = await SharedPreferences.getInstance();
+  Future<Future<bool>> removeAll() async {
+    final SharedPreferences myPrefs = await SharedPreferences.getInstance();
     return myPrefs.clear();
   }
 }

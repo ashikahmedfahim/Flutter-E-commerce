@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/toast.dart';
 import 'package:lacuna/constants.dart';
 import 'package:lacuna/mock_data/data.dart';
@@ -15,7 +18,7 @@ class ProductCard extends StatelessWidget {
           Navigator.pushNamed(context, 'productDetails/', arguments: product),
       child: Container(
         width: 160,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: kGreyBackground,
           borderRadius: BorderRadius.circular(10.0),
@@ -29,7 +32,7 @@ class ProductCard extends StatelessWidget {
                 Container(
                   height: 20.0,
                   width: 40.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: kLimeColor,
                     borderRadius:
                         BorderRadius.only(topLeft: Radius.circular(10.0)),
@@ -38,7 +41,7 @@ class ProductCard extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () => {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite_border,
                     color: kRedColor,
                     size: 30.0,
@@ -51,10 +54,10 @@ class ProductCard extends StatelessWidget {
               image: AssetImage(product.imgUrl),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 16.0, bottom: 6.0),
+              padding: const EdgeInsets.only(top: 16.0, bottom: 6.0),
               child: Text(
                 product.title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -62,14 +65,14 @@ class ProductCard extends StatelessWidget {
             ),
             Text(
               '\$${product.price.toString()}',
-              style: TextStyle(
+              style: const TextStyle(
                 color: kRedColor,
                 fontSize: 14.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 6.0),
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 6.0),
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -80,7 +83,7 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                   onPressed: () => showToast("Added to cart"),
-                  child: Text(
+                  child: const Text(
                     'Add To Cart',
                     style: TextStyle(fontSize: 12.0, color: kDarkTextColor),
                   ),

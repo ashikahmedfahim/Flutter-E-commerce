@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/mock_data/data.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -9,15 +12,15 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => null,
+      onTap: () => {},
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 16,
         ),
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(bottom: 15.0),
+              padding: const EdgeInsets.only(bottom: 15.0),
               child: Image(
                 height: 60.0,
                 width: 60.0,
@@ -27,7 +30,7 @@ class CategoryCard extends StatelessWidget {
             ),
             Text(
               category.title,
-              style: TextStyle(fontSize: 14.0),
+              style: const TextStyle(fontSize: 14.0),
             ),
           ],
         ),

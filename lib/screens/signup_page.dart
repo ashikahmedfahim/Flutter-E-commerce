@@ -1,7 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/social_login.dart';
-import '../components/welcome_background.dart';
 import 'package:lacuna/constants.dart';
+import '../components/welcome_background.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -12,7 +15,7 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   bool isVisible = false;
-  toggleVisibility(bool value) {
+  void toggleVisibility(bool value) {
     setState(() {
       isVisible = value;
     });
@@ -30,7 +33,7 @@ Column signUpView(
     BuildContext context, bool isVisible, Function toggleVisibility) {
   return Column(
     children: [
-      Text(
+      const Text(
         'Create An Account',
         style: TextStyle(
           color: Color(0xff222222),
@@ -39,9 +42,9 @@ Column signUpView(
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 20.0, bottom: 32.0),
+        padding: const EdgeInsets.only(top: 20.0, bottom: 32.0),
         child: Column(
-          children: [
+          children: const [
             Text(
               'To get more advantages create your account',
               style: TextStyle(
@@ -60,183 +63,183 @@ Column signUpView(
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your First Name',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.person,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Last Name',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.person,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Email',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.email,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Phone Number',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.phone,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Date Of Birth',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.calendar_today,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           enableSuggestions: false,
           autocorrect: false,
-          obscureText: isVisible ? false : true,
+          obscureText: !isVisible,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+            contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
             fillColor: kDarkTextColor,
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: kGreyText,
             ),
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 width: 0.8,
               ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 width: 0.8,
                 color: kPrimaryColor,
               ),
             ),
             hintText: 'Enter Your Password',
-            prefixIcon: Icon(
+            prefixIcon: const Icon(
               Icons.lock,
               color: kPrimaryColor,
             ),
@@ -251,7 +254,7 @@ Column signUpView(
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 30.0),
+        padding: const EdgeInsets.only(top: 30.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
@@ -262,7 +265,8 @@ Column signUpView(
           ),
           child: TextButton(
             onPressed: () => Navigator.pushNamed(context, 'signupAdditional/'),
-            child: Text(
+            style: const ButtonStyle(),
+            child: const Text(
               'Continue',
               style: TextStyle(
                 fontSize: 17.0,
@@ -270,11 +274,10 @@ Column signUpView(
                 color: kDarkTextColor,
               ),
             ),
-            style: ButtonStyle(),
           ),
         ),
       ),
-      SocialLogin(
+      const SocialLogin(
         socialLoginText: 'Or Sign Up with',
       ),
     ],

@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/constants.dart';
 
 class LabelWithSeeAll extends StatelessWidget {
@@ -15,14 +18,14 @@ class LabelWithSeeAll extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
         ),
         TextButton(
           onPressed: () => Navigator.pushNamed(context, seeAllPressedRoute),
-          child: Text(
+          child: const Text(
             'See All',
             style: TextStyle(
               fontSize: 14.0,

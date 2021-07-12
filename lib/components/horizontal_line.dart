@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/constants.dart';
 
 class HorizontalLine extends StatelessWidget {
@@ -12,7 +15,7 @@ class HorizontalLine extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
-          children: [
+          children: const [
             Divider(
               color: kGreyText,
               thickness: 2.0,

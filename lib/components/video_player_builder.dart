@@ -1,7 +1,11 @@
-import 'package:video_player/video_player.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Package imports:
+import 'package:video_player/video_player.dart';
+
 class VideoApp extends StatefulWidget {
+  const VideoApp({Key? key}) : super(key: key);
   @override
   _VideoAppState createState() => _VideoAppState();
 }

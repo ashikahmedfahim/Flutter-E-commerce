@@ -1,7 +1,10 @@
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../components/welcome_background.dart';
+
+// Project imports:
 import '../components/social_login.dart';
+import '../components/welcome_background.dart';
 import '../constants.dart';
 
 class SignInPage extends StatefulWidget {
@@ -14,13 +17,13 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   bool isRememberChecked = false;
   bool isVisible = false;
-  toggleVisibility(bool value) {
+  void toggleVisibility(bool value) {
     setState(() {
       isVisible = value;
     });
   }
 
-  toggleCheck(bool value) {
+  void toggleCheck(bool value) {
     setState(() {
       isRememberChecked = value;
     });
@@ -43,7 +46,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
     Function toggleCheck, bool isVisible, Function toggleVisibility) {
   return Column(
     children: [
-      Text(
+      const Text(
         'Sign In To Your Account',
         style: TextStyle(
           color: Color(0xff222222),
@@ -52,9 +55,9 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 20.0, bottom: 32.0),
+        padding: const EdgeInsets.only(top: 20.0, bottom: 32.0),
         child: Column(
-          children: [
+          children: const [
             Text(
               'Enter your Email address and password to',
               style: TextStyle(
@@ -73,63 +76,63 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
               fillColor: kDarkTextColor,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kGreyText,
               ),
               filled: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 0.8,
                   color: kPrimaryColor,
                 ),
               ),
               hintText: 'Enter Your Email',
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.email,
                 color: kPrimaryColor,
               )),
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: TextField(
           enableSuggestions: false,
           autocorrect: false,
-          obscureText: isVisible ? false : true,
+          obscureText: !isVisible,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+            contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
             fillColor: kDarkTextColor,
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: kGreyText,
             ),
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 width: 0.8,
               ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 width: 0.8,
                 color: kPrimaryColor,
               ),
             ),
             hintText: 'Enter Your Password',
-            prefixIcon: Icon(
+            prefixIcon: const Icon(
               Icons.lock,
               color: kPrimaryColor,
             ),
@@ -144,7 +147,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 14.0),
+        padding: const EdgeInsets.symmetric(vertical: 14.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -163,13 +166,13 @@ Column signInView(BuildContext context, bool isRememberChecked,
                     ),
                   ),
                 ),
-                Text(
+                const Text(
                   'Remember me',
                   style: TextStyle(color: kGreyText, fontSize: 16.0),
                 ),
               ],
             ),
-            Text(
+            const Text(
               'Forgot Password?',
               style: TextStyle(color: kGreyText, fontSize: 16.0),
             ),
@@ -177,7 +180,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
@@ -188,7 +191,8 @@ Column signInView(BuildContext context, bool isRememberChecked,
           ),
           child: TextButton(
             onPressed: () => Navigator.pushNamed(context, 'home/'),
-            child: Text(
+            style: const ButtonStyle(),
+            child: const Text(
               'Sign In',
               style: TextStyle(
                 fontSize: 17.0,
@@ -196,24 +200,23 @@ Column signInView(BuildContext context, bool isRememberChecked,
                 color: kDarkTextColor,
               ),
             ),
-            style: ButtonStyle(),
           ),
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 10.0),
+        padding: const EdgeInsets.only(top: 10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Don\'t have an account?',
+            const Text(
+              "Don't have an account?",
               style: TextStyle(color: kGreyText, fontSize: 16.0),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: TextButton(
                 onPressed: () => Navigator.pushNamed(context, 'signup/'),
-                child: Text(
+                child: const Text(
                   'Sign Up',
                   style: TextStyle(
                     color: kPrimaryColor,
@@ -226,7 +229,7 @@ Column signInView(BuildContext context, bool isRememberChecked,
           ],
         ),
       ),
-      SocialLogin(
+      const SocialLogin(
         socialLoginText: 'Or Sign In with',
       ),
     ],

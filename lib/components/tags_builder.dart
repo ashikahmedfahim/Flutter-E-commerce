@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/mock_data/data.dart';
 
 Wrap tagsBuilder() {
@@ -10,7 +13,7 @@ Wrap tagsBuilder() {
           child: ChoiceChip(
               label: Text(
                 tags[i].tagName,
-                style: TextStyle(fontSize: 17.0),
+                style: const TextStyle(fontSize: 17.0),
               ),
               selected: false),
         ),

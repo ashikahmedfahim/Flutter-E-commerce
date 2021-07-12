@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:lacuna/components/table_text.dart';
 import 'package:lacuna/constants.dart';
 
@@ -15,20 +18,19 @@ class TableBuilder extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           color: kGreyText,
-          width: 1,
         ),
-        borderRadius: BorderRadius.all(Radius.circular(5)),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
       child: Table(
         border: TableBorder.symmetric(
-          inside: BorderSide(width: 1),
+          inside: const BorderSide(),
         ),
         children: [
           for (int i = 0; i < titles.length; i++)
             TableRow(
               children: [
-                tableText(titles[i]),
-                tableText(titleValues[i]),
+                tableText(titles[i] as String),
+                tableText(titleValues[i] as String),
               ],
             ),
         ],
