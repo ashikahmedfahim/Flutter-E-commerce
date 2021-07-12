@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
         appBar: NormalAppBar(
           appBar: AppBar(),
           title: 'Profile',
-          disableIcon: false,
+          disableIcon: true,
         ),
         body: Container(
           padding: const EdgeInsets.all(16.0),
