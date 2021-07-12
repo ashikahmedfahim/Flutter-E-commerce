@@ -1,8 +1,10 @@
 // Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:lacuna/components/normal_appbar.dart';
+import 'package:lacuna/components/profile_button.dart';
 import 'package:lacuna/constants.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -72,25 +74,48 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 50.0,
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: kPrimaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(7), // <-- Radius
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      child: Column(
+                        children: const [
+                          ProfileButton(
+                            buttonName: "User Settings",
+                            buttonIcon: Icons.settings,
+                          ),
+                          ProfileButton(
+                            buttonName: "Order History",
+                            buttonIcon: Icons.watch_later,
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Logout',
-                    style: TextStyle(
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.w500,
-                      color: kDarkTextColor,
+                    SizedBox(
+                      height: 50.0,
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: kPrimaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(7), // <-- Radius
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: const Text(
+                          'Logout',
+                          style: TextStyle(
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.w500,
+                            color: kDarkTextColor,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ],
