@@ -44,7 +44,7 @@ class ProfileButton extends StatelessWidget {
         ),
       ),
       onTap: () {
-        print(buttonName);
+        //print(buttonName);
       },
     );
   }
