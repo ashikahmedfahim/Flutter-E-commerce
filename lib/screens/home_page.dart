@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const LabelWithSeeAll(
                     label: "Latest",
-                    seeAllPressedRoute: 'productDetails/',
+                    seeAllPressedRoute: '/',
                   ),
                   ProductXAxisSectionBuilder(
                     products: products,
@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const LabelWithSeeAll(
                     label: "Best Seller",
-                    seeAllPressedRoute: 'productDetails/',
+                    seeAllPressedRoute: '/',
                   ),
                   ProductXAxisSectionBuilder(
                     products: products,
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const LabelWithSeeAll(
                     label: "Specials",
-                    seeAllPressedRoute: 'productDetails/',
+                    seeAllPressedRoute: '/',
                   ),
                   ProductXAxisSectionBuilder(
                     products: products,
@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const LabelWithSeeAll(
                     label: "All Products",
-                    seeAllPressedRoute: 'productDetails/',
+                    seeAllPressedRoute: '/',
                   ),
                   ProductYAxisSectionBuilder(
                     products: products,

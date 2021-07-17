@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
         appBar: NormalAppBar(
           appBar: AppBar(),
           title: 'Profile',
-          disableIcon: false,
+          disableIcon: true,
         ),
         body: Container(
           padding: const EdgeInsets.all(16.0),
@@ -104,7 +104,8 @@ class ProfilePage extends StatelessWidget {
                                 BorderRadius.circular(7), // <-- Radius
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushReplacementNamed(context, 'home/'),
                         child: const Text(
                           'Logout',
                           style: TextStyle(
