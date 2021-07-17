@@ -17,7 +17,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(160.0),
-        child: AppBarWithSearchBar(),
+        child: AppBarWithSearchBar(
+          showExtraProperty: true,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16.0, 10.0, 16.0, 30.0),

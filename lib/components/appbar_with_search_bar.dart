@@ -9,7 +9,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lacuna/constants.dart';
 
 class AppBarWithSearchBar extends StatefulWidget {
-  const AppBarWithSearchBar({Key? key}) : super(key: key);
+  final bool showExtraProperty;
+  final String? searchTerm;
+  const AppBarWithSearchBar(
+      {Key? key, required this.showExtraProperty, this.searchTerm})
+      : super(key: key);
 
   @override
   _AppBarWithSearchBarState createState() => _AppBarWithSearchBarState();
@@ -19,55 +23,64 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
-    final TextEditingController searchTerm = TextEditingController();
+    final TextEditingController searchTerm =
+        TextEditingController(text: widget.searchTerm);
     return AppBar(
       brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
-      leading: Padding(
-        padding: const EdgeInsets.only(top: 18.0),
-        child: IconButton(
-          onPressed: () => Navigator.pushNamed(context, 'profile/'),
-          icon: const Icon(
-            Icons.person,
-            size: 30,
-          ),
-        ),
-      ),
-      centerTitle: true,
-      title: Padding(
-        padding: const EdgeInsets.only(top: 35.0),
-        child: SvgPicture.asset(
-          'assets/images/Logo.svg',
-          semanticsLabel: 'Lacuna',
-          height: 40,
-        ),
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 18.0,
-          ),
-          child: TextButton(
-            onPressed: () => Navigator.pushNamed(context, 'cart/'),
-            child: Badge(
-              badgeColor: kSecondaryTextColor,
-              badgeContent: const Text(
-                '3',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+      leading: widget.showExtraProperty
+          ? Padding(
+              padding: const EdgeInsets.only(top: 18.0),
+              child: IconButton(
+                onPressed: () => Navigator.pushNamed(context, 'profile/'),
+                icon: const Icon(
+                  Icons.person,
+                  size: 30,
                 ),
               ),
-              child: const Icon(
-                Icons.shopping_bag,
-                color: kDarkTextColor,
-                size: 30,
+            )
+          : null,
+      centerTitle: true,
+      title: widget.showExtraProperty
+          ? Padding(
+              padding: const EdgeInsets.only(top: 35.0),
+              child: SvgPicture.asset(
+                'assets/images/Logo.svg',
+                semanticsLabel: 'Lacuna',
+                height: 40,
               ),
-            ),
-          ),
-        )
+            )
+          : null,
+      actions: [
+        widget.showExtraProperty
+            ? Padding(
+                padding: const EdgeInsets.only(
+                  top: 18.0,
+                ),
+                child: TextButton(
+                  onPressed: () => Navigator.pushNamed(context, 'cart/'),
+                  child: Badge(
+                    badgeColor: kSecondaryTextColor,
+                    badgeContent: const Text(
+                      '3',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.shopping_bag,
+                      color: kDarkTextColor,
+                      size: 30,
+                    ),
+                  ),
+                ),
+              )
+            : Container()
       ],
       flexibleSpace: Padding(
-        padding: const EdgeInsets.only(top: 115.0),
+        padding: widget.showExtraProperty
+            ? const EdgeInsets.only(top: 115.0)
+            : const EdgeInsets.only(top: 80.0),
         child: Form(
           key: _formKey,
           child: Row(
@@ -86,6 +99,7 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                       return null;
                     },
                     decoration: InputDecoration(
+                      errorStyle: const TextStyle(height: 0),
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 5.0, horizontal: 10.0),
                       fillColor: kDarkTextColor,
@@ -122,7 +136,8 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                   ),
                   child: IconButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
+                      if (_formKey.currentState!.validate() &&
+                          widget.showExtraProperty) {
                         Navigator.pushNamed(
                           context,
                           'search/',
