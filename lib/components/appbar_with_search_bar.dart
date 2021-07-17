@@ -143,7 +143,8 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                           'search/',
                           arguments: searchTerm.text,
                         );
-                      }
+                      } else if (_formKey.currentState!.validate() &&
+                          !widget.showExtraProperty) {}
                     },
                     icon: const Icon(
                       Icons.search,
