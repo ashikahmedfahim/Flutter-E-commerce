@@ -8,11 +8,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 // Project imports:
 import 'package:lacuna/constants.dart';
 
-class AppBarWithSearchBar extends StatelessWidget {
+class AppBarWithSearchBar extends StatefulWidget {
   const AppBarWithSearchBar({Key? key}) : super(key: key);
 
   @override
+  _AppBarWithSearchBarState createState() => _AppBarWithSearchBarState();
+}
+
+class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
+  @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
+    final TextEditingController searchTerm = TextEditingController();
     return AppBar(
       brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
@@ -61,16 +68,26 @@ class AppBarWithSearchBar extends StatelessWidget {
       ],
       flexibleSpace: Padding(
         padding: const EdgeInsets.only(top: 115.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.only(left: 16.0, bottom: 15.0, right: 9.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
+        child: Form(
+          key: _formKey,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: 16.0, bottom: 15.0, right: 9.0),
+                  child: TextFormField(
+                    controller: searchTerm,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "";
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 5.0, horizontal: 10.0),
                       fillColor: kDarkTextColor,
                       hintStyle: const TextStyle(
                         color: kGrey,
@@ -90,29 +107,38 @@ class AppBarWithSearchBar extends StatelessWidget {
                         ),
                       ),
                       hintText: 'Search here...',
-                      prefixIcon: const Icon(Icons.search)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 16.0, bottom: 15.0),
-              child: Container(
-                height: 44.0,
-                width: 44.0,
-                decoration: BoxDecoration(
-                  color: kSecondaryButtonColor,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.tune_outlined,
-                    color: kDarkTextColor,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(right: 16.0, bottom: 15.0),
+                child: Container(
+                  height: 44.0,
+                  width: 44.0,
+                  decoration: BoxDecoration(
+                    color: kSecondaryButtonColor,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushNamed(
+                          context,
+                          'search/',
+                          arguments: searchTerm.text,
+                        );
+                      }
+                    },
+                    icon: const Icon(
+                      Icons.search,
+                      color: kDarkTextColor,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
