@@ -4,8 +4,12 @@ import 'package:lacuna/constants.dart';
 class ProfileButton extends StatelessWidget {
   final IconData buttonIcon;
   final String buttonName;
+  final String nextPage;
   const ProfileButton(
-      {Key? key, required this.buttonName, required this.buttonIcon})
+      {Key? key,
+      required this.buttonName,
+      required this.buttonIcon,
+      required this.nextPage})
       : super(key: key);
 
   @override
@@ -43,7 +47,7 @@ class ProfileButton extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () => Navigator.pushNamed(context, 'setting/'),
+      onTap: () => Navigator.pushNamed(context, nextPage),
     );
   }
 }

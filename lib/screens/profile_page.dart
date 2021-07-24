@@ -85,10 +85,12 @@ class ProfilePage extends StatelessWidget {
                           ProfileButton(
                             buttonName: "User Settings",
                             buttonIcon: Icons.settings,
+                            nextPage: 'setting/',
                           ),
                           ProfileButton(
                             buttonName: "Order History",
                             buttonIcon: Icons.watch_later,
+                            nextPage: 'orderHistory/',
                           )
                         ],
                       ),
