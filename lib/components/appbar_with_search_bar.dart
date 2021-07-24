@@ -43,7 +43,7 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                 ),
               ),
             )
-          : Container(),
+          : null,
       centerTitle: true,
       title: widget.showExtraProperty
           ? Padding(
@@ -54,7 +54,7 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                 height: 40,
               ),
             )
-          : Container(),
+          : null,
       actions: [
         widget.showExtraProperty
             ? Padding(
