@@ -43,9 +43,7 @@ class ProfileButton extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () {
-        // print(buttonName);
-      },
+      onTap: () => Navigator.pushNamed(context, 'setting/'),
     );
   }
 }
