@@ -14,10 +14,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(140.0),
-        child: AppBarWithSearchBar(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(screenSize.height / 5),
+        child: const AppBarWithSearchBar(
           showExtraProperty: true,
         ),
       ),

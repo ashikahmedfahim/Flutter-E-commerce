@@ -12,9 +12,10 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(120.0),
+        preferredSize: Size.fromHeight(screenSize.height / 5.5),
         child: AppBarWithSearchBar(
           searchTerm: searchTerm,
           showExtraProperty: false,
