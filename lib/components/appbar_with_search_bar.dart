@@ -25,6 +25,10 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
     final _formKey = GlobalKey<FormState>();
     final TextEditingController searchTerm =
         TextEditingController(text: widget.searchTerm);
+
+    final double screenSizeHeight =
+        (Theme.of(context).platform == TargetPlatform.iOS) ? 120 : 100;
+
     return AppBar(
       brightness: Brightness.dark,
       backgroundColor: kPrimaryColor,
@@ -39,7 +43,7 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                 ),
               ),
             )
-          : null,
+          : Container(),
       centerTitle: true,
       title: widget.showExtraProperty
           ? Padding(
@@ -50,7 +54,7 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
                 height: 40,
               ),
             )
-          : null,
+          : Container(),
       actions: [
         widget.showExtraProperty
             ? Padding(
@@ -79,8 +83,8 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
       ],
       flexibleSpace: Padding(
         padding: widget.showExtraProperty
-            ? const EdgeInsets.only(top: 100.0)
-            : const EdgeInsets.only(top: 80.0),
+            ? EdgeInsets.only(top: screenSizeHeight)
+            : EdgeInsets.only(top: screenSizeHeight - 10),
         child: Form(
           key: _formKey,
           child: Row(

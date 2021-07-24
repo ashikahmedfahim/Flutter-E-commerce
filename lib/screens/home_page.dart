@@ -15,9 +15,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    double screenSizeHeight = (Theme.of(context).platform == TargetPlatform.iOS)
+        ? 130
+        : screenSize.height / 5;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(screenSize.height / 5),
+        preferredSize: Size.fromHeight(screenSizeHeight),
         child: const AppBarWithSearchBar(
           showExtraProperty: true,
         ),
