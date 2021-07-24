@@ -69,10 +69,9 @@ class _OrderHistorySingleProductState extends State<OrderHistorySingleProduct> {
                             ),
                           ),
                         ),
-                        ChoiceChip(
+                        Chip(
                           label: Text('Cancelled'),
-                          selected: true,
-                          selectedColor: kPriceColor,
+                          backgroundColor: kPriceColor,
                           labelStyle: TextStyle(
                             color: kDarkTextColor,
                           ),

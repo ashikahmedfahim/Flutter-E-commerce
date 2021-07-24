@@ -79,8 +79,8 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
       ],
       flexibleSpace: Padding(
         padding: widget.showExtraProperty
-            ? const EdgeInsets.only(top: 90.0)
-            : const EdgeInsets.only(top: 60.0),
+            ? const EdgeInsets.only(top: 100.0)
+            : const EdgeInsets.only(top: 80.0),
         child: Form(
           key: _formKey,
           child: Row(
