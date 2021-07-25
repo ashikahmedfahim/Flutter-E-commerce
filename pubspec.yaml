@@ -18,6 +18,7 @@ dependencies:
   shared_preferences: ^2.0.5
   video_player: ^2.1.6
   modal_bottom_sheet: ^2.0.0
+  floor: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +26,8 @@ dev_dependencies:
   import_sorter: ^4.6.0
   flutter_lints: ^1.0.4
   flutter_launcher_icons: ^0.9.0
+  floor_generator: ^1.1.0
+  build_runner: ^2.0.0
 
 flutter_launcher_name:
   name: "Lacuna"
