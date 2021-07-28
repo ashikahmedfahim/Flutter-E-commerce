@@ -1,12 +1,14 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lacuna/database/database.dart';
 
 // Project imports:
 import 'package:lacuna/routes/route.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await $FloorLacunaDatabase.databaseBuilder('lacuna_database.db').build();
   runApp(const MyApp());
 }
 
