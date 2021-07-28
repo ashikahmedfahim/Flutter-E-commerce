@@ -14,6 +14,13 @@ class OfferSectionBuilder extends StatefulWidget {
 }
 
 class _OfferSectionBuilderState extends State<OfferSectionBuilder> {
+  double selectedValue = 0;
+  selectValue(double value) {
+    setState(() {
+      selectedValue = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,8 +30,9 @@ class _OfferSectionBuilderState extends State<OfferSectionBuilder> {
         scrollDirection: Axis.horizontal,
         itemCount: offers.length,
         itemBuilder: (BuildContext context, int index) => OfferCard(
-          offer: offers[index],
-        ),
+            selectValue: selectValue,
+            isSelected: selectedValue == offers[index].price ? true : false,
+            offer: offers[index]),
       ),
     );
   }

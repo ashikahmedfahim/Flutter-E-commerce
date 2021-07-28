@@ -7,7 +7,14 @@ import '../mock_data/data.dart';
 
 class InchCard extends StatefulWidget {
   final Variation variation;
-  const InchCard({Key? key, required this.variation}) : super(key: key);
+  final Function selectValue;
+  final bool isSelected;
+  const InchCard(
+      {Key? key,
+      required this.selectValue,
+      required this.isSelected,
+      required this.variation})
+      : super(key: key);
 
   @override
   _InchCardState createState() => _InchCardState();
@@ -21,19 +28,26 @@ class _InchCardState extends State<InchCard> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
+          color: widget.isSelected ? kPrimaryColor : kDarkTextColor,
           border: Border.all(
             color: kGreyText,
             width: 1.5,
           ),
         ),
         child: GestureDetector(
-          onTap: () => {},
+          onTap: () {
+            setState(() {
+              widget.selectValue(widget.variation.size);
+            });
+          },
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Center(
               child: Text(
                 '${widget.variation.size}" inches',
-                style: const TextStyle(fontSize: 15.0, color: kGreyText),
+                style: TextStyle(
+                    fontSize: 15.0,
+                    color: widget.isSelected ? kDarkTextColor : kGreyText),
               ),
             ),
           ),

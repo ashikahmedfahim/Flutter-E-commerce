@@ -15,6 +15,13 @@ class ColorSectionBuilder extends StatefulWidget {
 }
 
 class _ColorSectionBuilderState extends State<ColorSectionBuilder> {
+  Color selectedValue = Colors.teal;
+  selectValue(Color value) {
+    setState(() {
+      selectedValue = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,6 +31,9 @@ class _ColorSectionBuilderState extends State<ColorSectionBuilder> {
         scrollDirection: Axis.horizontal,
         itemCount: varientColors.length,
         itemBuilder: (BuildContext context, int index) => ColorCard(
+          selectValue: selectValue,
+          isSelected:
+              selectedValue == varientColors[index].varientColor ? true : false,
           varientColor: varientColors[index],
         ),
       ),

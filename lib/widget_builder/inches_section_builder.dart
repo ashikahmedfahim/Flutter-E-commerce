@@ -7,6 +7,7 @@ import '../mock_data/data.dart';
 
 class InchesSectionBuilder extends StatefulWidget {
   final List<Variation> variations;
+
   const InchesSectionBuilder({Key? key, required this.variations})
       : super(key: key);
 
@@ -15,6 +16,13 @@ class InchesSectionBuilder extends StatefulWidget {
 }
 
 class _InchesSectionBuilderState extends State<InchesSectionBuilder> {
+  int selectedValue = 0;
+  selectValue(int value) {
+    setState(() {
+      selectedValue = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,6 +32,8 @@ class _InchesSectionBuilderState extends State<InchesSectionBuilder> {
         scrollDirection: Axis.horizontal,
         itemCount: variations.length,
         itemBuilder: (BuildContext context, int index) => InchCard(
+          selectValue: selectValue,
+          isSelected: selectedValue == variations[index].size ? true : false,
           variation: variations[index],
         ),
       ),

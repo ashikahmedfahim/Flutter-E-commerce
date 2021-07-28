@@ -7,7 +7,14 @@ import 'package:lacuna/mock_data/data.dart';
 
 class OfferCard extends StatefulWidget {
   final Offer offer;
-  const OfferCard({Key? key, required this.offer}) : super(key: key);
+  final Function selectValue;
+  final bool isSelected;
+  const OfferCard(
+      {Key? key,
+      required this.selectValue,
+      required this.isSelected,
+      required this.offer})
+      : super(key: key);
 
   @override
   _OfferCardState createState() => _OfferCardState();
@@ -21,13 +28,18 @@ class _OfferCardState extends State<OfferCard> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
+          color: widget.isSelected ? kPrimaryColor : kDarkTextColor,
           border: Border.all(
             color: kGreyText,
             width: 1.5,
           ),
         ),
         child: GestureDetector(
-          onTap: () => {},
+          onTap: () {
+            setState(() {
+              widget.selectValue(widget.offer.price);
+            });
+          },
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
@@ -37,15 +49,15 @@ class _OfferCardState extends State<OfferCard> {
                   children: [
                     Text(
                       '${widget.offer.min} - ',
-                      style: const TextStyle(
-                        color: kGreyText,
+                      style: TextStyle(
+                        color: widget.isSelected ? kDarkTextColor : kGreyText,
                         fontSize: 14.0,
                       ),
                     ),
                     Text(
                       '${widget.offer.max} pcs',
-                      style: const TextStyle(
-                        color: kGreyText,
+                      style: TextStyle(
+                        color: widget.isSelected ? kDarkTextColor : kGreyText,
                         fontSize: 14.0,
                       ),
                     ),
@@ -53,8 +65,8 @@ class _OfferCardState extends State<OfferCard> {
                 ),
                 Text(
                   '\$${widget.offer.price}',
-                  style: const TextStyle(
-                    color: kPrimaryColor,
+                  style: TextStyle(
+                    color: widget.isSelected ? kDarkTextColor : kPrimaryColor,
                     fontSize: 22.0,
                     fontWeight: FontWeight.bold,
                   ),
