@@ -12,7 +12,7 @@ class CategoryCardBG extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: () => Navigator.pushNamed(context, 'category/'),
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,

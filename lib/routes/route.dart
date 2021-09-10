@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Project imports:
 import 'package:lacuna/mock_data/data.dart';
 import 'package:lacuna/screens/cart_page.dart';
+import 'package:lacuna/screens/categories_page.dart';
 import 'package:lacuna/screens/category_page.dart';
 import 'package:lacuna/screens/checkout_page.dart';
 import 'package:lacuna/screens/home_page.dart';
@@ -31,6 +32,7 @@ Route<dynamic> lacunaGeneratedRoutes(RouteSettings settings) {
         ),
     'cart/': (context) => const CartPage(),
     'checkout/': (context) => const CheckOutPage(),
+    'categories/': (context) => const CategoriesPage(),
     'category/': (context) => const CategoryPage(),
     'profile/': (context) => const ProfilePage(),
     'setting/': (context) => const SettingPage(),

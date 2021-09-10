@@ -85,6 +85,15 @@ final List<Product> products = [
     reviewStars: 5.0,
     reviewCount: 45,
   ),
+  Product(
+    tag: 'New',
+    isFavourite: true,
+    imgUrl: 'assets/images/latestTwo.png',
+    title: 'Awesome T-shirt',
+    price: 139.99,
+    reviewStars: 5.0,
+    reviewCount: 45,
+  ),
 ];
 
 class Offer {

@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 // Project imports:
 import 'package:lacuna/constants.dart';
 
-class ProductDetailsMainButton extends StatelessWidget {
+class DynamicButton extends StatelessWidget {
   final String buttonName;
   final double buttonWidth;
   final Color buttonBackgroundColor;
   final VoidCallback setView;
   final String routeString;
-  const ProductDetailsMainButton({
+  const DynamicButton({
     Key? key,
     required this.buttonName,
     required this.buttonWidth,

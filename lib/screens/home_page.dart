@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.only(top: 16.0, bottom: 20.0),
                   child: LabelWithSeeAll(
                     label: "All Categories",
-                    seeAllPressedRoute: 'category/',
+                    seeAllPressedRoute: 'categories/',
                   ),
                 ),
                 CategoryXAxisSectionBuilder(categories: categories)

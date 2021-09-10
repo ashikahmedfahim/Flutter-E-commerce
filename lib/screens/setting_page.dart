@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lacuna/components/normal_appbar.dart';
-import 'package:lacuna/components/product_details_main_button.dart';
+import 'package:lacuna/components/dynamic_button.dart';
 
 import '../constants.dart';
 
@@ -411,7 +411,7 @@ class _SettingPageState extends State<SettingPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProductDetailsMainButton(
+                    DynamicButton(
                       buttonName: 'Cancel',
                       buttonWidth: (windowSize.width / 2) - 20,
                       buttonBackgroundColor: selectedActionButton == 'Cancel'
@@ -420,7 +420,7 @@ class _SettingPageState extends State<SettingPage> {
                       setView: () {},
                       routeString: "",
                     ),
-                    ProductDetailsMainButton(
+                    DynamicButton(
                       buttonName: 'Done',
                       buttonWidth: (windowSize.width / 2) - 20,
                       buttonBackgroundColor: selectedActionButton == 'Done'

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:lacuna/components/normal_appbar.dart';
-import 'package:lacuna/components/product_details_main_button.dart';
+import 'package:lacuna/components/dynamic_button.dart';
 import 'package:lacuna/components/table_builder.dart';
 import 'package:lacuna/components/tags_builder.dart';
 import 'package:lacuna/components/text_title.dart';
@@ -220,7 +220,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProductDetailsMainButton(
+                    DynamicButton(
                       buttonName: 'Add To Cart',
                       buttonWidth: (windowSize.width / 2) - 20,
                       buttonBackgroundColor:
@@ -235,7 +235,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       },
                       routeString: "",
                     ),
-                    ProductDetailsMainButton(
+                    DynamicButton(
                       buttonName: 'Buy Now',
                       buttonWidth: (windowSize.width / 2) - 20,
                       buttonBackgroundColor: selectedActionButton == 'Buy Now'
@@ -259,7 +259,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProductDetailsMainButton(
+                    DynamicButton(
                       buttonName: 'Description',
                       buttonWidth: (windowSize.width / 3) - 20,
                       buttonBackgroundColor: selectedButton == 'Description'
@@ -272,7 +272,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       },
                       routeString: "",
                     ),
-                    ProductDetailsMainButton(
+                    DynamicButton(
                         buttonName: 'Spec.',
                         buttonWidth: (windowSize.width / 3) - 20,
                         buttonBackgroundColor: selectedButton == 'Specification'
@@ -284,7 +284,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           });
                         },
                         routeString: ""),
-                    ProductDetailsMainButton(
+                    DynamicButton(
                         buttonName: 'Videos',
                         buttonWidth: (windowSize.width / 3) - 20,
                         buttonBackgroundColor: selectedButton == 'Videos'
