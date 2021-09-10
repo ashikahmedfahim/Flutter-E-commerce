@@ -39,12 +39,9 @@ class HomePage extends StatelessWidget {
               children: [
                 const Padding(
                   padding: EdgeInsets.only(top: 16.0, bottom: 20.0),
-                  child: Text(
-                    'All Categories',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: LabelWithSeeAll(
+                    label: "All Categories",
+                    seeAllPressedRoute: 'category/',
                   ),
                 ),
                 CategoryXAxisSectionBuilder(categories: categories)
