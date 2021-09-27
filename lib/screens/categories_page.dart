@@ -18,7 +18,7 @@ class CategoriesPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: GridView.builder(
-          padding: EdgeInsets.only(top: 25.0),
+          padding: const EdgeInsets.only(top: 25.0),
           shrinkWrap: true,
           itemCount: categories.length,
           physics: const NeverScrollableScrollPhysics(),

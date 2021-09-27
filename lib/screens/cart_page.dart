@@ -173,7 +173,7 @@ class _CartPageState extends State<CartPage> {
                   height: 60.0,
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: () => Navigator.pushNamed(context, 'authCheck/'),
+                    onPressed: () => Navigator.pushNamed(context, 'checkout/'),
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimaryColor,
                     ),

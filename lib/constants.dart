@@ -19,6 +19,7 @@ const kDarkTextColor = Colors.white;
 const kDarkSpanColor = Color(0xffbcc3ca);
 const kRedColor = Color(0xffff404d);
 const kLimeColor = Color(0xff00d598);
+const kSuccessColor = Color(0xff49B583);
 const kDarkAshColor = Color(0xff5b5b5b);
 const kSoftBlackColor = Color(0xff222222);
 const kPriceColor = Color(0xfff42c04);
